@@ -61,7 +61,7 @@ bindsym $mod+Shift+F1 exec alacritty -e pulsemixer
 floating_modifier $mod
 
 # toggle touchpad 
-bindsym $mod+Ctrl+t exec ~/scripts/toggle_touchpad.sh
+bindsym $mod+Ctrl+t exec ~/.scripts/toggle_touchpad.sh
 
 # Keybinds for opening apps
 # Open a terminal
