@@ -67,7 +67,7 @@ bindsym $mod+Ctrl+t exec ~/.scripts/toggle_touchpad.sh
 # Open a terminal
 bindsym $mod+t exec alacritty
 # open default web browser
-bindsym $mod+b exec "waterfox"
+bindsym $mod+b exec "librewolf"
 # open emacs (client connected to daemon)
 bindsym $mod+e exec "emacsclient -c -a 'emacs'"
 # open default file browser
@@ -240,7 +240,7 @@ for_window [class=.*] border pixel 2
 hide_edge_borders both
 
 # start picom
-exec picom -b
+# exec picom -b
 
 # start polybar
 exec_always --no-startup-id "$HOME/.config/polybar/launch.sh --forest"
@@ -280,7 +280,9 @@ exec --no-startup-id blueberry-tray
 
 exec --no-startup-id xdg-user-dirs-update
 
-exec dnfdragora-updater
+exec --no-startup-id lxpolkit
+
+# exec dnfdragora-updater
 
 # autotiling for i3
 exec_always --no-startup-id i3-autotiling

@@ -9,7 +9,7 @@ fi
 
 if [[ $DUNST_PAUSED == *"true"* ]]
 then
-    echo ""
+    echo ""
 else
-    echo ""
+    echo ""
 fi
