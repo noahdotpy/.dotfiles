@@ -6,9 +6,9 @@
 
 {
   imports =
-    [ # Include the results of the hardware scan.
-      ./hardware-configuration.nix
-      # <home-manager/nixos>
+    [
+      ./hardware-configuration.nix # Include the results of the hardware scan.
+      # <home-manager/nixos> # Home manager
     ];
   fonts.fontDir.enable = true;
   fonts.enableDefaultFonts = true;
