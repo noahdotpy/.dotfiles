@@ -117,7 +117,7 @@
       jetbrains.pycharm-community
       jetbrains.idea-community
       autotiling
-      github-desktop
+      # github-desktop
       (import <unstable> {}).go_1_19
       starship
     ];
