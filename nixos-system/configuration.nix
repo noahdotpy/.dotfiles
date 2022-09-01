@@ -35,6 +35,7 @@
 
   # Enable networking
   networking.networkmanager.enable = true;
+  programs.nm-applet.enable = true;
   
   # Enable bluetooth
   hardware.bluetooth.enable = true;
@@ -60,6 +61,7 @@
   programs.dconf.enable = true;
 
   services.flatpak.enable = true;
+  programs.kdeconnect.enable = true;
 
   programs.fish.enable = true;
 
@@ -118,7 +120,6 @@
       github-desktop
       (import <unstable> {}).go_1_19
       starship
-      libsForQt5.kdeconnect-kde
     ];
   };
 
@@ -128,8 +129,6 @@
   # List packages installed in system profile. To search, run:
   # $ nix search wget
   environment.systemPackages = with pkgs; [
-    vim # Do not forget to add an editor to edit configuration.nix! The Nano editor is also installed by default.
-    neovim
     wget
     htop
     curl
@@ -149,8 +148,9 @@
     rofi-emoji
     acpi
     dunst
+    vim
+    neovim
     nerdfonts
-    networkmanagerapplet
     git
     libsForQt5.kgpg
     pinentry
