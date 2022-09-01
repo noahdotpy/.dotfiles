@@ -58,6 +58,8 @@
   services.xserver.windowManager.i3.package = pkgs.i3-gaps;
   services.xserver.windowManager.i3.enable = true;
 
+  virtualisation.libvirtd.enable = true;
+
   programs.dconf.enable = true;
 
   services.flatpak.enable = true;
@@ -117,6 +119,8 @@
       jetbrains.pycharm-community
       jetbrains.idea-community
       autotiling
+      virt-manager
+      qbittorrent
       # github-desktop
       (import <unstable> {}).go_1_19
       starship
