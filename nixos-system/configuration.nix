@@ -1,4 +1,4 @@
-q# Edit this configuration file to define what should be installed on
+# Edit this configuration file to define what should be installed on
 # your system.  Help is available in the configuration.nix(5) man page
 # and in the NixOS manual (accessible by running ‘nixos-help’).
 
@@ -63,7 +63,7 @@ q# Edit this configuration file to define what should be installed on
 
   programs.fish.enable = true;
 
-  program.zsh = {
+  programs.zsh = {
     enable = true;
     enableCompletion = true;
     autosuggestions.enable = true;
@@ -173,10 +173,12 @@ q# Edit this configuration file to define what should be installed on
   # Some programs need SUID wrappers, can be configured further or are
   # started in user sessions.
   # programs.mtr.enable = true;
-  # programs.gnupg.agent = {
-    # enable = true;
+  programs.gnupg.agent = {
+    enable = true;
+    pinentryFlavor = "qt";
     # enableSSHSupport = true;
-  # };
+  };
+  services.gnome.gnome-keyring.enable = true;
 
   # List services that you want to enable:
 
