@@ -1,6 +1,6 @@
 # Edit this configuration file to define what should be installed on
 # your system.  Help is available in the configuration.nix(5) man page
-# and in the NixOS manual (accessible by running ‘nixos-help’).
+# and in the NixOS manual (accessible by running `nixos-help`).
 
 { config, pkgs, ... }:
 
@@ -105,26 +105,11 @@
   # Enable touchpad support (enabled default in most desktopManager).
   # services.xserver.libinput.enable = true;
 
-  # Define a user account. Don't forget to set a password with ‘passwd’.
+  # Define a user account. Don't forget to set a password with `passwd`.
   users.users.noah = {
     isNormalUser = true;
-    description = "noah";
     initialPassword = "temp";
-    extraGroups = [ "networkmanager" "wheel" ];
-    packages = with pkgs; [
-      librewolf
-      kate
-      # pulseaudio
-      vscode
-      jetbrains.pycharm-community
-      jetbrains.idea-community
-      autotiling
-      virt-manager
-      qbittorrent
-      # github-desktop
-      (import <unstable> {}).go_1_19
-      starship
-    ];
+    extraGroups = [ "networkmanager" "wheel" "libvirtd" ];
   };
 
   # Allow unfree packages
@@ -132,46 +117,46 @@
 
   # List packages installed in system profile. To search, run:
   # $ nix search wget
-  environment.systemPackages = with pkgs; [
-    wget
-    htop
-    curl
-    deja-dup
-    ark
-    duplicity  
-    alacritty
-    rofi
-    polybar
-    picom
-    haskellPackages.greenclip
-    playerctl
-    brightnessctl
-    pulsemixer
-    ksnip
-    # pulseaudio
-    rofi-emoji
-    acpi
-    dunst
-    vim
-    neovim
-    nerdfonts
-    git
-    libsForQt5.kgpg
-    pinentry
-    blueman
-    feh
-    gnupg
-    nitrogen
-    pinentry
-    onlyoffice-bin
-    gnome.dconf-editor
-    gnome.nautilus
-    unzip
-    zip
-    i3lock-color
-    python311
-    glibc
-    gcc
+  environment.systemPackages = [
+    pkgs.wget
+    pkgs.htop
+    pkgs.curl
+    pkgs.deja-dup
+    pkgs.ark
+    pkgs.duplicity  
+    pkgs.alacritty
+    pkgs.rofi
+    pkgs.polybar
+    pkgs.picom
+    pkgs.haskellPackages.greenclip
+    pkgs.playerctl
+    pkgs.brightnessctl
+    pkgs.pulsemixer
+    pkgs.ksnip
+    # pkgs.pulseaudio
+    pkgs.rofi-emoji
+    pkgs.acpi
+    pkgs.dunst
+    pkgs.vim
+    pkgs.neovim
+    pkgs.nerdfonts
+    pkgs.git
+    pkgs.libsForQt5.kgpg
+    pkgs.pinentry
+    pkgs.blueman
+    pkgs.feh
+    pkgs.gnupg
+    pkgs.nitrogen
+    pkgs.pinentry
+    pkgs.onlyoffice-bin
+    pkgs.gnome.dconf-editor
+    pkgs.gnome.nautilus
+    pkgs.unzip
+    pkgs.zip
+    pkgs.i3lock-color
+    pkgs.python311
+    pkgs.glibc
+    pkgs.gcc
   ];
 
   # Some programs need SUID wrappers, can be configured further or are
@@ -197,7 +182,7 @@
 
   # This value determines the NixOS release from which the default
   # settings for stateful data, like file locations and database versions
-  # on your system were taken. It‘s perfectly fine and recommended to leave
+  # on your system were taken. It's perfectly fine and recommended to leave
   # this value at the release version of the first install of this system.
   # Before changing this value read the documentation for this option
   # (e.g. man configuration.nix or on https://nixos.org/nixos/options.html).
