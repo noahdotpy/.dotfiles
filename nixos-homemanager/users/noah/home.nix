@@ -19,12 +19,14 @@ let nixpkgsConfig = if config.nixpkgs.config == null then {} else config.nixpkgs
       pkgs.autotiling
       pkgs.virt-manager
       pkgs.qbittorrent
+      pkgs.starship
+      pkgs.libsForQt5.okular
+      pkgs.libnotify
+      pkgs.gh
       unstable.go_1_19
       unstable.glances
-      pkgs.starship
-    ];
-  # };
-
+  ];
+  
   # This value determines the Home Manager release that your
   # configuration is compatible with. This helps avoid breakage
   # when a new Home Manager release introduces backwards
