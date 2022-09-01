@@ -20,8 +20,8 @@
   # in
   # home.packages = let unstable = (import (fetchTarball "https://github.com/nixos/nixpkgs/tarball/master") { inherit (config.nixpkgs) config; } ); in [
   # home.packages = let unstable = (import <nixos-unstable>); in [
-    # home.packages = let unstable = import (fetchTarball "https://github.com/NixOS/nixpkgs/tarball/master") { config = config.nixpkgs.config; }; in [
-  home.packages = [
+  home.packages = let unstable = import (fetchTarball "https://github.com/NixOS/nixpkgs/tarball/master") { config = config.nixpkgs.config; }; in [
+  # home.packages = [
       { config = config.nixpkgs.config; }
       # pkgs.glances
       pkgs.librewolf
@@ -34,8 +34,8 @@
       pkgs.virt-manager
       pkgs.qbittorrent
       # pkgs.github-desktop
-      # unstable.go_1_19
-      (import <nixos-unstable> {}).go_1_19
+      unstable.go_1_19
+      # (import <nixos-unstable> {}).go_1_19
       pkgs.starship
     ];
   # };
