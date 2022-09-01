@@ -1,11 +1,9 @@
 { config, pkgs, ... }:
 
-# let unstable = (
-#     import (fetchTarball "https://github.com/nixos/nixpkgs/tarball/master")
-#     { inherit (config.nixpkgs) config; }
-#   );
-# in
+let nixpkgsConfig = if config.nixpkgs.config == null then {} else config.nixpkgs.config; in
 {
+
+  
 
   # Home Manager needs a bit of information about you and the
   # paths it should manage.
@@ -20,7 +18,8 @@
   # in
   # home.packages = let unstable = (import (fetchTarball "https://github.com/nixos/nixpkgs/tarball/master") { inherit (config.nixpkgs) config; } ); in [
   # home.packages = let unstable = (import <nixos-unstable>); in [
-  home.packages = let unstable = import (fetchTarball "https://github.com/NixOS/nixpkgs/tarball/master") { config = config.nixpkgs.config; }; in [
+  # home.packages = let unstable = import (fetchTarball "https://github.com/NixOS/nixpkgs/tarball/master") { config.allowUnfree = true; }; in [
+  home.packages = let unstable = import (fetchTarball "https://github.com/NixOS/nixpkgs/tarball/master") { config = nixpkgsConfig; }; in [
   # home.packages = [
       { config = config.nixpkgs.config; }
       # pkgs.glances
