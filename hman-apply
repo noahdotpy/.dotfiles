@@ -1,0 +1,2 @@
+#!/bin/sh
+home-manager switch -f /home/noah/.dotfiles/nixos-homemanager/users/noah/home.nix
