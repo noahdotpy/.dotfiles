@@ -157,6 +157,7 @@
     pkgs.python311
     pkgs.glibc
     pkgs.gcc
+    pkgs.notepadqq
   ];
 
   # Some programs need SUID wrappers, can be configured further or are
