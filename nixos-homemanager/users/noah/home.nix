@@ -15,14 +15,14 @@
       pkgs.glances
       pkgs.librewolf
       pkgs.kate
-      pkgs.# pulseaudio
+      # pkgs.pulseaudio
       pkgs.vscode
       pkgs.jetbrains.pycharm-community
       pkgs.jetbrains.idea-community
       pkgs.autotiling
       pkgs.virt-manager
       pkgs.qbittorrent
-      pkgs.# github-desktop
+      # pkgs.github-desktop
       unstable.go_1_19
       pkgs.starship
     ];
