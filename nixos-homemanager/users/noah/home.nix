@@ -21,7 +21,7 @@ let nixpkgsConfig = if config.nixpkgs.config == null then {} else config.nixpkgs
   # home.packages = let unstable = import (fetchTarball "https://github.com/NixOS/nixpkgs/tarball/master") { config.allowUnfree = true; }; in [
   home.packages = let unstable = import (fetchTarball "https://github.com/NixOS/nixpkgs/tarball/master") { config = nixpkgsConfig; }; in [
   # home.packages = [
-      { config = config.nixpkgs.config; }
+      # { config = config.nixpkgs.config; }
       # pkgs.glances
       pkgs.librewolf
       pkgs.kate
