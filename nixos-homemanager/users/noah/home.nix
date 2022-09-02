@@ -34,6 +34,7 @@ in
       pkgs.papirus-icon-theme
       pkgs.gimp
       pkgs.minecraft
+      pkgs.mailspring
       unstable.go_1_19
       unstable.glances
   ];
