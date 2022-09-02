@@ -31,6 +31,9 @@ in
       pkgs.libnotify
       pkgs.gh
       pkgs.spacevim
+      pkgs.papirus-icon-theme
+      pkgs.gimp
+      pkgs.minecraft
       unstable.go_1_19
       unstable.glances
   ];
