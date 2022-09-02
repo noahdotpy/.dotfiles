@@ -30,6 +30,7 @@ in
       pkgs.libsForQt5.okular
       pkgs.libnotify
       pkgs.gh
+      pkgs.spacevim
       unstable.go_1_19
       unstable.glances
   ];

@@ -1,2 +1,3 @@
 #!/bin/sh
+echo "Switching to new NixOS config..."
 sudo nixos-rebuild switch -I nixos-config=/home/noah/.dotfiles/nixos-system/configuration.nix
