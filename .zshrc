@@ -61,11 +61,11 @@ abbrev-alias epbconf="$EDITOR ~/.config/polybar"
 abbrev-alias pbconf="cd ~/.config/polybar"
 
 # NixOS shortcuts
-abbrev-alias enixc="sudo $EDITOR /home/noah/.dotfiles/nixos-system/configuration.nix"
+abbrev-alias enixc="$EDITOR /home/noah/.dotfiles/nixos-system/configuration.nix"
 abbrev-alias nixrbs="sudo nixos-rebuild switch -I nixos-config=/home/noah/.dotfiles/nixos-system/configuration.nix"
 
 
-abbrev-alias nixupd="/home/noah/.dotfiles/hman-update+apply && /home/noah/.dotfiles/nixos-update+apply"
+abbrev-alias nixupd="/home/noah/.dotfiles/.scripts/hman-update+apply && /home/noah/.dotfiles/.scripts/nixos-update+apply"
 
 # NixOS Home Manager shortcuts
 abbrev-alias hman="home-manager"
