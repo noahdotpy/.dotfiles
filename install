@@ -36,4 +36,4 @@ do
 done
 
 echo "Making sym-link: $CURR_DIR/.zshrc -> ~/.zshrc"
-ln -s -f ~/.dotfiles/.zshrc ~
+ln -s -f $CURR_DIR/.zshrc ~
