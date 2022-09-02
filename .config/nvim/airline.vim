@@ -27,7 +27,7 @@ let g:airline_powerline_fonts = 1
 " let g:airline_right_sep = ''
 
 " Set the airline theme
-let g:airline_theme = 'onedark'
+let g:airline_theme = 'transparent'
 
 " Always show tabs
 set showtabline=2

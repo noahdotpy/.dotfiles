@@ -26,7 +26,9 @@ set tabstop=4 " Set tabs to 4 spaces
 set shiftwidth=4
 set softtabstop=4
 
+" Expand tabs to spaces instead
 set expandtab
+
 set smarttab
 
 " Enables mouse on all modes
