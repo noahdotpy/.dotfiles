@@ -1,5 +1,5 @@
 #!/bin/sh
-pushd /home/noah/.dotfiles/
+pushd /home/noah/.dotfiles/.scripts/
 ./nixos-update
 ./nixos-apply
 popd
