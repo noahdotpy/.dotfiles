@@ -215,6 +215,7 @@
     pkgs.glibc
     pkgs.gcc
     pkgs.notepadqq
+    pkgs.libsForQt5.kdialog
   ];
 
   # This value determines the NixOS release from which the default

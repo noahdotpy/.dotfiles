@@ -96,4 +96,4 @@ abbrev-alias vids="cd ~/Videos"
 export SDKMAN_DIR="$HOME/.sdkman"
 [[ -s "$HOME/.sdkman/bin/sdkman-init.sh" ]] && source "$HOME/.sdkman/bin/sdkman-init.sh"
 
-if [ -e /home/noahe/.nix-profile/etc/profile.d/nix.sh ]; then . /home/noahe/.nix-profile/etc/profile.d/nix.sh; fi # added by Nix installer
+if [ -e /home/noah/.nix-profile/etc/profile.d/nix.sh ]; then . /home/noah/.nix-profile/etc/profile.d/nix.sh; fi # added by Nix installer
