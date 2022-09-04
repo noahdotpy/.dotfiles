@@ -127,7 +127,7 @@ nnoremap <S-Tab> <<
 xnoremap <Tab> >
 xnoremap <S-Tab> <
 """"""""""""""""""""""""""""""""""""""""
-" => CTRL+A to select whole file
+" => Leader+A to select whole file
 """"""""""""""""""""""""""""""""""""""""
 nnoremap <leader>a gg <S-v> G
 """"""""""""""""""""""""""""""""""""""""
@@ -137,7 +137,7 @@ noremap <leader>c :Commentary<CR>
 """"""""""""""""""""""""""""""""""""""""
 " => Open terminal inside Vim
 """"""""""""""""""""""""""""""""""""""""
-map <leader>tt :vnew term://powershell.exe<CR>
+map <leader>tt :vnew term://zsh<CR>
 """"""""""""""""""""""""""""""""""""""""
 " => Neovide Configs
 """"""""""""""""""""""""""""""""""""""""
