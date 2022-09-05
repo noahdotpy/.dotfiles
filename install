@@ -7,12 +7,14 @@ if [[ $1 == "--replace-existing" ]]
 then
     echo "Replacing existing files..."
 
+    mkdir ~/.scripts/
     for FILE in .config/*
     do
         echo "Removing ~/$FILE for replacement."
         rm -rf ~/$FILE
     done
 
+    mkdir ~/.scripts/
     for FILE in .scripts/*
     do
         echo "Removing ~/$FILE for replacement."
@@ -36,4 +38,4 @@ do
 done
 
 echo "Making sym-link: $CURR_DIR/.zshrc -> ~/.zshrc"
-ln -s -f $CURR_DIR/.zshrc ~
+ln -s -f $RAW_CURR_DIR/.zshrc ~
