@@ -30,7 +30,7 @@ in
       pkgs.libsForQt5.okular
       pkgs.libnotify
       pkgs.gh
-      spacevim
+      pkgs.spacevim
       pkgs.papirus-icon-theme
       pkgs.gimp
       pkgs.minecraft

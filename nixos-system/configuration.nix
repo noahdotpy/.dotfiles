@@ -215,6 +215,7 @@
     pkgs.glibc
     pkgs.gcc
     pkgs.notepadqq
+    pkgs.gdu
     pkgs.libsForQt5.kdialog
   ];
 
