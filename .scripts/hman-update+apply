@@ -1,5 +1,0 @@
-#!/bin/sh
-pushd /home/noah/.dotfiles/.scripts/
-./hman-update
-./hman-apply
-popd

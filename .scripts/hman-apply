@@ -1,3 +1,0 @@
-#!/bin/sh
-echo "Switching to new user configs..."
-home-manager switch -f /home/noah/.dotfiles/nixos-homemanager/users/noah/home.nix

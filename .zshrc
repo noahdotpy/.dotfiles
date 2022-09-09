@@ -42,6 +42,8 @@ export BROWSER="librewolf"
 
 # Config shortcuts
 abbrev-alias conf="cd ~/.config"
+abbrev-alias edots="$EDITOR ~/.dotfiles"
+abbrev-alias dots="cd ~/.dotfiles"
 abbrev-alias zshrc="$EDITOR ~/.zshrc"
 abbrev-alias ealconf="$EDITOR ~/.config/alacritty/"
 abbrev-alias alconf="cd ~/.config/alacritty/"
@@ -62,10 +64,11 @@ abbrev-alias pbconf="cd ~/.config/polybar"
 
 # NixOS shortcuts
 abbrev-alias enixc="$EDITOR /home/noah/.dotfiles/nixos-system/configuration.nix"
-abbrev-alias nixrbs="sudo nixos-rebuild switch -I nixos-config=/home/noah/.dotfiles/nixos-system/configuration.nix"
 
-
-abbrev-alias nixupd="/home/noah/.dotfiles/.scripts/hman-update+apply && /home/noah/.dotfiles/.scripts/nixos-update+apply"
+abbrev-alias nixupd="~/.dotfiles/.scripts/nixos-update"
+abbrev-alias nixapply="~/.dotfiles/.scripts/users-apply && ~/.dotfiles/.scripts/system-apply"
+abbrev-alias nixapplysys="~/.dotfiles/.scripts/system-apply"
+abbrev-alias nixapplyusrs="~/.dotfiles/.scripts/users-apply"
 
 # NixOS Home Manager shortcuts
 abbrev-alias hman="home-manager"

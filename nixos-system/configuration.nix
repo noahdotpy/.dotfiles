@@ -59,8 +59,11 @@
   # Select internationalisation properties.
   i18n.defaultLocale = "en_AU.utf8";
 
-  # Enable the X11 windowing system.
+  # Custom nix options
+  nix.settings.experimental-features = [ "nix-command" "flakes" ];
 
+
+  # Enable the X11 windowing system.
   services = {
     
     # Enable gnome keyring.
@@ -167,56 +170,73 @@
     isNormalUser = true;
     initialPassword = "temp";
     extraGroups = [ "networkmanager" "wheel" "libvirtd" ];
+    shell = pkgs.zsh;
   };
 
   # Allow unfree packages
   nixpkgs.config.allowUnfree = true;
+  nixpkgs.config.allowUnfreePredicate = _: true;
 
   # List packages installed in system profile. To search, run:
   # $ nix search wget
   environment.systemPackages = [
+    # Internet
+    pkgs.librewolf
     pkgs.wget
-    pkgs.htop
     pkgs.curl
-    pkgs.deja-dup
-    pkgs.ark
+
+    # Multi-media
+    pkgs.vlc
+    
+    # Text Editors
+    pkgs.micro
+    pkgs.vim
+    pkgs.neovim
+    pkgs.notepadqq
+    
+    # CLI/TUI
+    pkgs.htop
     pkgs.duplicity  
-    pkgs.alacritty
-    pkgs.rofi
-    pkgs.polybar
-    pkgs.picom
-    pkgs.haskellPackages.greenclip
     pkgs.playerctl
     pkgs.brightnessctl
     pkgs.pulsemixer
-    pkgs.ksnip
-    # pkgs.pulseaudio
-    pkgs.rofi-emoji
     pkgs.acpi
-    pkgs.dunst
-    pkgs.vim
-    pkgs.neovim
-    pkgs.nerdfonts
     pkgs.git
-    pkgs.libsForQt5.kgpg
-    pkgs.pinentry
-    pkgs.blueman
     pkgs.feh
     pkgs.gnupg
-    pkgs.nitrogen
-    pkgs.pinentry
-    pkgs.onlyoffice-bin
-    pkgs.gnome.dconf-editor
-    pkgs.gnome.nautilus
+    pkgs.gdu
+
+    # Tools
+    pkgs.deja-dup
+    pkgs.ark
+    pkgs.ksnip
     pkgs.unzip
     pkgs.zip
+    pkgs.pinentry
+    pkgs.gnome.dconf-editor
+
+    # i3 related
+    pkgs.rofi
+    pkgs.rofi-emoji
+    pkgs.polybar
+    pkgs.picom
+    pkgs.haskellPackages.greenclip
+    pkgs.nitrogen
     pkgs.i3lock-color
-    pkgs.python311
-    pkgs.glibc
-    pkgs.gcc
-    pkgs.notepadqq
-    pkgs.gdu
+    pkgs.dunst
+    pkgs.blueman
+    
+    
+    # Libraries/Programming Languages
     pkgs.libsForQt5.kdialog
+    pkgs.libsForQt5.kgpg
+    pkgs.libnotify
+    pkgs.gcc
+    pkgs.glibc
+    pkgs.python311
+
+    # Miscellaneous
+    pkgs.onlyoffice-bin
   ];
 
   # This value determines the NixOS release from which the default

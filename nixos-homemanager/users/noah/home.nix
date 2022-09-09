@@ -11,32 +11,58 @@ in
   ];
 
   nixpkgs.config.allowUnfree = true;
+  nixpkgs.config.allowUnfreePredicate = _: true;
 
   # Home Manager needs a bit of information about you and the
   # paths it should manage.
   home.username = "noah";
   home.homeDirectory = "/home/noah";
 
-  home.packages = let unstable = import (fetchTarball "https://github.com/NixOS/nixpkgs/tarball/master") { config = nixpkgsConfig; }; in [
-      pkgs.librewolf
-      pkgs.kate
+  programs = {
+    kitty = {
+      enable = true;
+      theme = "Tokyo Night";
+    };
+  };
+
+  home.packages = [
+      # Programming languages
+      pkgs.unstable.go_1_19
+
+      # Programming/Text Editors
+      pkgs.spacevim
+      pkgs.neovide # graphical client for neovim
       pkgs.vscode
       pkgs.jetbrains.pycharm-community
       pkgs.jetbrains.idea-community
+      pkgs.kate
+      pkgs.helix
+
+      # Games
+      pkgs.minecraft
+
+      # Theming
+      pkgs.papirus-icon-theme
+
+      # Graphics
+      pkgs.gimp
+
+      # TUI/CLI
+      pkgs.unstable.glances
+      pkgs.gh
+
+      # Terminal Emulators
+      pkgs.alacritty
+
+      # Libraries
+      pkgs.libnotify
+      pkgs.libsForQt5.okular
+
+      # Miscellaneous
       pkgs.autotiling
       pkgs.virt-manager
       pkgs.qbittorrent
-      pkgs.starship
-      pkgs.libsForQt5.okular
-      pkgs.libnotify
-      pkgs.gh
-      pkgs.spacevim
-      pkgs.papirus-icon-theme
-      pkgs.gimp
-      pkgs.minecraft
       pkgs.mailspring
-      unstable.go_1_19
-      unstable.glances
   ];
   
   # This value determines the Home Manager release that your
@@ -47,7 +73,7 @@ in
   # You can update Home Manager without changing this value. See
   # the Home Manager release notes for a list of state version
   # changes in each release.
-  home.stateVersion = "22.05";
+  # home.stateVersion = "22.05";
 
   # Let Home Manager install and manage itself.
   programs.home-manager.enable = true;

@@ -1,3 +1,5 @@
 #!/bin/sh
-echo "Updating NixOS packages..."
-sudo nix-channel --update
+pushd ~/.dotfiles
+echo "Updating flake.lock file..."
+nix flake update
+popd
