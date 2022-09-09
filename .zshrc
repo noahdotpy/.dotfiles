@@ -35,7 +35,7 @@ zle -N accept-line expand-alias-and-accept-line
 # SET ENVIRONMENTAL VARIABLES
 # export EDITOR="nvim"
 export EDITOR="spacevim"
-export TERMINAL="alacritty"
+export TERMINAL="kitty"
 export BROWSER="librewolf"
 
 # ADD ABBREVIATIONS
@@ -76,6 +76,8 @@ abbrev-alias ehmanc="$EDITOR /home/noah/.dotfiles/nixos-homemanager"
 abbrev-alias hmans="home-manager switch -f /home/noah/.dotfiles/nixos-homemanager/users/noah/home.nix"
 
 # Program shortcuts
+abbrev-alias e="$EDITOR"
+
 abbrev-alias nv="nvim"
 abbrev-alias sv="spacevim"
 abbrev-alias svim="spacevim"

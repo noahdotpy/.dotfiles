@@ -55,7 +55,7 @@ bindsym $mod+l exec "~/.config/betterlockscreen/launch.sh"
 bindsym $mod+Shift+c kill
 
 # Open pulsemixer (console volume control) app
-bindsym $mod+Shift+F1 exec alacritty -e pulsemixer
+bindsym $mod+Shift+F1 exec kitty -e pulsemixer
 
 # Use Mouse+$mod to drag floating windows to their wanted position
 floating_modifier $mod
@@ -65,15 +65,16 @@ bindsym $mod+Ctrl+t exec ~/.scripts/toggle_touchpad.sh
 
 # Keybinds for opening apps
 # Open a terminal
-bindsym $mod+t exec alacritty
+bindsym $mod+t exec kitty
 # open default web browser
 bindsym $mod+b exec "librewolf"
 # open emacs (client connected to daemon)
-bindsym $mod+e exec "emacsclient -c -a 'emacs'"
+# bindsym $mod+e exec "emacsclient -c -a 'emacs'"
+bindsym $mod+e exec "kitty $EDITOR"
 # open default file browser
 bindsym $mod+f exec "nautilus"
 # open system monitor (htop)
-bindsym $mod+Escape exec "alacritty -e htop"
+bindsym $mod+Escape exec "kitty -e htop"
 # screenshot tool
 # menu
 bindsym Print exec ksnip

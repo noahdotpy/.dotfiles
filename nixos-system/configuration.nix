@@ -158,6 +158,10 @@
 
   # Enable bluetooth.
   hardware.bluetooth.enable = true;
+  services.blueman.enable = true;
+  systemd.services.blueman.serviceConfig = {
+    Environment = "DISPLAY=:0.0";
+  };
 
   # Enable virtualisation.
   virtualisation.libvirtd.enable = true;
@@ -224,7 +228,7 @@
     pkgs.nitrogen
     pkgs.i3lock-color
     pkgs.dunst
-    pkgs.blueman
+    # pkgs.blueman
     
     
     # Libraries/Programming Languages
