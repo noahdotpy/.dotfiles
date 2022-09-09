@@ -31,7 +31,8 @@ in {
   home.sessionVariables = {
     BROWSER = "librewolf";
     EDITOR = "spacevim";
-    TERMINAL = "alacritty";
+    TERMINAL = "kitty";
+    TERM = "kitty";
   };
 
   xdg.mimeApps.enable = true;
