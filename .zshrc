@@ -89,10 +89,16 @@ abbrev-alias ideaproj="cd ~/IdeaProjects"
 abbrev-alias pyproj="cd ~/PycharmProjects"
 
 abbrev-alias dl="cd ~/Downloads"
+abbrev-alias dls="cd ~/Downloads"
+abbrev-alias downloads="cd ~/Downloads"
 abbrev-alias docs="cd ~/Documents"
-abbrev-alias pic="cd ~/Pictures"
+abbrev-alias documents="cd ~/Documents"
+abbrev-alias pics="cd ~/Pictures"
+abbrev-alias pictures="cd ~/Pictures"
 abbrev-alias walls="cd ~/Pictures/Wallpapers"
+abbrev-alias wallpapers="cd ~/Pictures/Wallpapers"
 abbrev-alias vids="cd ~/Videos"
+abbrev-alias videos="cd ~/Videos"
 
 
 #THIS MUST BE AT THE END OF THE FILE FOR SDKMAN TO WORK!!!
