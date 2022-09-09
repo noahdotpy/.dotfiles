@@ -30,6 +30,7 @@ let
 in {
   home.sessionVariables = {
     BROWSER = "librewolf";
+    EDITOR = "spacevim";
     TERMINAL = "alacritty";
   };
 
