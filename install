@@ -7,7 +7,7 @@ if [[ $1 == "--replace-existing" ]]
 then
     echo "Replacing existing files..."
 
-    mkdir ~/.scripts/
+    mkdir ~/.config/
     for FILE in .config/*
     do
         echo "Removing ~/$FILE for replacement."

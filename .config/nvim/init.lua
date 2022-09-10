@@ -25,6 +25,8 @@ require('packer').startup(function(use)
   use 'lukas-reineke/indent-blankline.nvim'                                       -- Add indentation guides even on blank lines
   use 'tpope/vim-sleuth'                                                          -- Detect tabstop and shiftwidth automatically
   use { 'nvim-telescope/telescope.nvim', requires = { 'nvim-lua/plenary.nvim' } } -- Fuzzy Finder (files, lsp, etc)
+  use { "catppuccin/nvim", as = "catppuccin" } -- Catppuccin theme for neovim
+  use 'folke/tokyonight.nvim' -- Tokyo night theme for neovim
 
   -- Fuzzy Finder Algorithm which requires local dependencies to be built. Only load if `make` is available
   use { 'nvim-telescope/telescope-fzf-native.nvim', run = 'make', cond = vim.fn.executable "make" == 1 }
@@ -95,7 +97,7 @@ vim.wo.signcolumn = 'yes'
 
 -- Set colorscheme
 vim.o.termguicolors = true
-vim.cmd [[colorscheme onedark]]
+vim.cmd [[colorscheme tokyonight-night]]
 
 -- Set completeopt to have a better completion experience
 vim.o.completeopt = 'menuone,noselect'
@@ -133,11 +135,15 @@ vim.api.nvim_create_autocmd('TextYankPost', {
 require('lualine').setup {
   options = {
     icons_enabled = false,
-    theme = 'onedark',
+    theme = 'tokyonight-night',
     component_separators = '|',
     section_separators = '',
   },
 }
+
+-- Enable Catppuccin theme
+vim.g.catppuccin_flavour = "macchiato" -- latte, frappe, macchiato, mocha
+require("catppuccin").setup()
 
 -- Enable Comment.nvim
 require('Comment').setup()

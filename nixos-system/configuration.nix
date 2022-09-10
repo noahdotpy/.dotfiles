@@ -210,6 +210,7 @@
     pkgs.feh
     pkgs.gnupg
     pkgs.gdu
+    pkgs.ripgrep
 
     # Tools
     pkgs.deja-dup
