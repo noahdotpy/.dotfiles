@@ -5,6 +5,7 @@ ealiases=()
 # write a function for adding an alias to the list mentioned above
 function abbrev-alias() {
     alias $1
+    export $1
     ealiases+=(${1%%\=*})
 }
 
