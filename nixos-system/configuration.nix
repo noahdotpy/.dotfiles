@@ -191,6 +191,7 @@
 
     # Multi-media
     pkgs.vlc
+    pkgs.pulseaudio
     
     # Text Editors
     pkgs.micro
@@ -223,6 +224,7 @@
     # i3 related
     pkgs.rofi
     pkgs.rofi-emoji
+    pkgs.eww # bar
     pkgs.polybar
     pkgs.picom
     pkgs.haskellPackages.greenclip

@@ -34,8 +34,7 @@ zle -N accept-line expand-alias-and-accept-line
 
 
 # SET ENVIRONMENTAL VARIABLES
-# export EDITOR="nvim"
-export EDITOR="spacevim"
+export EDITOR="nvim"
 export TERMINAL="kitty"
 export BROWSER="librewolf"
 

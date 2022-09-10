@@ -16,6 +16,15 @@ VOLUME=$(pulsemixer --get-volume)
 MUTED=$(pulsemixer --get-mute)
 SINK=$(getDefaultSink)
 SOURCE=$(getDefaultSource)
+STEP_INTERVAL=5
+
+if [[ $1 == "up" ]]; then
+  pulsemixer --change-volume +5
+elif [[ $1 == "down" ]]; then
+  pulsemixer --change-volume -5
+elif [[ $1 == "mute" ]]; then
+  pulsemixer --toggle-mute
+fi
 
 if [[ $MUTED == "1" ]]
 then
@@ -23,4 +32,3 @@ then
 else
     echo "${VOLUME} ${SINK}"
 fi
-
