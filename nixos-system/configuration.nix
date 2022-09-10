@@ -218,6 +218,7 @@
     pkgs.zip
     pkgs.pinentry
     pkgs.gnome.dconf-editor
+    pkgs.bitwarden # awesome password manager
 
     # i3 related
     pkgs.rofi
