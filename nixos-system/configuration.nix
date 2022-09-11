@@ -94,7 +94,7 @@
         plasma5.enable = true;
       };
 
-      # Enable the i3-gaps window manager.
+      # Enable all the (nerdy) window managers.
       windowManager = {
         i3 = {
           package = pkgs.i3-gaps;

@@ -15,10 +15,10 @@ function getDefaultSource() {
 function outputVolumes() {
     if [ "${IS_MUTED}" == "1" ]; then
             # echo " ${SOURCE} |   MUTED ${SINK}"
-            echo "  MUTED ${SINK}"
+            echo "墳 MUTED ${SINK}"
         else
             # echo " ${SOURCE} |    ${VOLUME}% ${SINK}"
-            echo "   ${VOLUME}% ${SINK}"
+            echo "墳 ${VOLUME}% ${SINK}"
     fi
 }
 
