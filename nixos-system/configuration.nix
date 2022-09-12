@@ -168,7 +168,7 @@
   virtualisation.libvirtd.enable = true;
 
   # Enable touchpad support (enabled default in most desktopManager).
-  # services.xserver.libinput.enable = true;
+  services.xserver.libinput.enable = true;
 
   # Define a user account. Don't forget to set a password with `passwd` post-install.
   users.users.noah = {
@@ -212,6 +212,7 @@
     pkgs.gnupg
     pkgs.gdu
     pkgs.ripgrep
+    pkgs.ranger
 
     # Tools
     pkgs.deja-dup
@@ -224,7 +225,8 @@
     pkgs.bitwarden # awesome password manager
 
     # STANDALONE WINDOW MANAGER PROGRAMS
-    pkgs.sxhkd # hotkey daemon
+    # apps
+    pkgs.gnome.nautilus
     # bars
     pkgs.eww
     pkgs.polybar
@@ -235,6 +237,7 @@
     pkgs.picom
     # tools
     pkgs.haskellPackages.greenclip
+    pkgs.sxhkd # hotkey daemon
     pkgs.nitrogen
     # notifications
     pkgs.dunst
