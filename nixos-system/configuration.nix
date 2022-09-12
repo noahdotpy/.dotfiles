@@ -100,12 +100,7 @@
           package = pkgs.i3-gaps;
           enable = true;
         };
-        qtile = {
-          enable = true;
-        };
-        spectrwm = {
-          enable = true;
-        };
+        bspwm = { enable = true; };
       };
     };
 
@@ -228,18 +223,24 @@
     pkgs.gnome.dconf-editor
     pkgs.bitwarden # awesome password manager
 
-    # i3 related
+    # STANDALONE WINDOW MANAGER PROGRAMS
+    pkgs.sxhkd # hotkey daemon
+    # bars
+    pkgs.eww
+    pkgs.polybar
+    # rofi
     pkgs.rofi
     pkgs.rofi-emoji
-    pkgs.eww # bar
-    pkgs.polybar
+    # compositors
     pkgs.picom
+    # tools
     pkgs.haskellPackages.greenclip
     pkgs.nitrogen
-    pkgs.i3lock-color
+    # notifications
     pkgs.dunst
-    # pkgs.blueman
-    
+    # lock
+    pkgs.i3lock-color
+    pkgs.xlockmore
     
     # Libraries/Programming Languages
     pkgs.libsForQt5.kdialog
