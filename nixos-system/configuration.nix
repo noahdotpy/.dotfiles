@@ -100,6 +100,12 @@
           package = pkgs.i3-gaps;
           enable = true;
         };
+        qtile = {
+          enable = true;
+        };
+        spectrwm = {
+          enable = true;
+        };
       };
     };
 

@@ -17,10 +17,10 @@
   let
     system = "x86_64-linux";
     
-    # pkgs = import nixpkgs {
-    #   inherit system;
-    #   config = { allowUnfree = true; };
-    # };
+    pkgs = import nixpkgs {
+      inherit system;
+      config = { allowUnfree = true; };
+    };
 
 
     overlay-unstable = final: prev: {
@@ -43,7 +43,7 @@
 
     homeManagerConfigurations = {
       noah = home-manager.lib.homeManagerConfiguration {
-        pkgs = nixpkgs.legacyPackages.${system};
+        pkgs = pkgs;
         modules = [
           ({ config, pkgs, ... }: { nixpkgs.overlays = [ overlay-unstable overlay-stable ]; })
           ./nixos-homemanager/users/noah/home.nix

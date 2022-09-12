@@ -22,6 +22,9 @@ in
     kitty = {
       enable = true;
       theme = "Tokyo Night";
+      settings = {
+        confirm_os_window_close = 0;
+      };
     };
   };
 
@@ -37,9 +40,6 @@ in
       pkgs.jetbrains.idea-community
       pkgs.kate
       pkgs.helix
-
-      # Games
-      pkgs.minecraft
 
       # Theming
       pkgs.papirus-icon-theme
