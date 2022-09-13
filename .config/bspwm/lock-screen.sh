@@ -1,4 +1,5 @@
 #! /bin/sh
 
-# i3lock &
-xlock &
+i3lock &
+# xlock -mode matrix &
+# xlock -mode space &

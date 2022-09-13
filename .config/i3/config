@@ -92,7 +92,7 @@ bindsym $mod+d exec "rofi -modi 'combi' -show combi -show-icons"
 # clipboard Manager
 bindsym $mod+v exec "rofi -modi 'clipboard:greenclip print' -show clipboard -run-command '{cmd}'"
 # keybinding to open rofi-power-menu
-bindsym $mod+Shift+Escape exec "~/.config/polybar/forest/scripts/powermenu.sh"
+bindsym $mod+Shift+Escape exec "~/.scripts/rofi-powermenu.sh"
 # keybinding to open rofi emoji menu
 bindsym $mod+period exec "rofi -modi emoji -show emoji"
 

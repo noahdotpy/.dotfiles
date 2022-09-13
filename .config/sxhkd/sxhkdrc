@@ -90,7 +90,7 @@ super + v
 	rofi -modi 'clipboard:greenclip print' -show clipboard -run-command '{cmd}'
 
 super + shift + Escape
-	~/.config/polybar/forest/scripts/powermenu.sh
+	~/.scripts/rofi-powermenu.sh
 
 super + period
 	rofi -modi emoji -show emoji
@@ -101,7 +101,7 @@ super + period
 
 # lock
 super + l
-	~/.dotfiles/.config/sxhkd/lock-screen.sh
+	~/.scripts/lock-screen.sh
 
 # quit/restart bspwm
 super + {shift + }r
