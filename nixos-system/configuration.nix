@@ -96,11 +96,11 @@
 
       # Enable all the (nerdy) window managers.
       windowManager = {
-        i3 = {
-          package = pkgs.i3-gaps;
-          enable = true;
-        };
+        i3 = { enable = true; package = pkgs.i3-gaps; };
         bspwm = { enable = true; };
+        leftwm = { enable = true; };
+        awesome = { enable = true; };
+        xmonad = { enable = true; };
       };
     };
 

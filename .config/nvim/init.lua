@@ -28,6 +28,9 @@ require('packer').startup(function(use)
   use { "catppuccin/nvim", as = "catppuccin" } -- Catppuccin theme for neovim
   use 'folke/tokyonight.nvim' -- Tokyo night theme for neovim
 
+  -- language supports
+  use 'ron-rs/ron.vim' -- .ron support
+
   -- Fuzzy Finder Algorithm which requires local dependencies to be built. Only load if `make` is available
   use { 'nvim-telescope/telescope-fzf-native.nvim', run = 'make', cond = vim.fn.executable "make" == 1 }
 

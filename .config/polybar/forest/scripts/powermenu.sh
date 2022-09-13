@@ -56,10 +56,17 @@ case $chosen in
         fi
         ;;
     $lock)
-		if [[ -f /usr/bin/i3lock ]]; then
-			i3lock
-		elif [[ -f /usr/bin/betterlockscreen ]]; then
-			betterlockscreen -l
+		# if [[ -f /usr/bin/i3lock ]]; then
+		# 	i3lock
+		# elif [[ -f /usr/bin/betterlockscreen ]]; then
+		# 	betterlockscreen -l
+		# fi
+		if [[ "$DESKTOP_SESSION" == *"Openbox"* ]]; then
+			openbox --exit
+		elif [[ "$DESKTOP_SESSION" == *"bspwm"* ]]; then
+			~/.config/bspwm/lock-screen.sh
+		elif [[ "$DESKTOP_SESSION" == *"i3"* ]]; then
+			~/.config/i3/lock-screen.sh
 		fi
         ;;
     $suspend)
@@ -75,11 +82,11 @@ case $chosen in
     $logout)
 		ans=$(confirm_exit &)
 		if [[ $ans == "yes" || $ans == "YES" || $ans == "y" || $ans == "Y" ]]; then
-			if [[ "$DESKTOP_SESSION" == "Openbox" ]]; then
+			if [[ "$DESKTOP_SESSION" == *"Openbox"* ]]; then
 				openbox --exit
-			elif [[ "$DESKTOP_SESSION" == "bspwm" ]]; then
+			elif [[ "$DESKTOP_SESSION" == *"bspwm"* ]]; then
 				bspc quit
-			elif [[ "$DESKTOP_SESSION" == "i3" ]]; then
+			elif [[ "$DESKTOP_SESSION" == *"i3"* ]]; then
 				i3-msg exit
 			fi
 		elif [[ $ans == "no" || $ans == "NO" || $ans == "n" || $ans == "N" ]]; then

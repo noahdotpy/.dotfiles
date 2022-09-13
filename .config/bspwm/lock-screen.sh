@@ -1,3 +1,4 @@
 #! /bin/sh
 
-i3lock &
+# i3lock &
+xlock &
