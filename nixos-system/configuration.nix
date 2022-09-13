@@ -100,6 +100,7 @@
         bspwm = { enable = true; };
         leftwm = { enable = true; };
         awesome = { enable = true; };
+        qtile = { enable = true; };
         xmonad = { enable = true; };
       };
     };
