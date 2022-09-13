@@ -88,10 +88,12 @@
       
       # Enable the KDE Plasma Desktop Environment.
       displayManager = {
-        sddm.enable = true;
+        # sddm.enable = true;
+        gdm.enable = true;
       };
       desktopManager = {
         plasma5.enable = true;
+        gnome.enable = true;
       };
 
       # Enable all the (nerdy) window managers.
@@ -124,6 +126,8 @@
   programs = {
 
     nm-applet.enable = true;
+
+    ssh.askPassword = pkgs.lib.mkForce "${pkgs.ksshaskpass.out}/bin/ksshaskpass";
 
     # Some programs need SUID wrappers, can be configured further or are
     # started in user sessions.
