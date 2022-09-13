@@ -40,6 +40,7 @@ in
       pkgs.jetbrains.idea-community
       pkgs.kate
       pkgs.helix
+      pkgs.emacs # text editor + tetris + turns your computer into a rocket ship + oh yeah elden ring comes pre-installed as well
 
       # Theming
       pkgs.papirus-icon-theme
