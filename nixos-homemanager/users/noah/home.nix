@@ -43,6 +43,7 @@ in
 
       # Theming
       pkgs.papirus-icon-theme
+      pkgs.tela-circle-icon-theme
 
       # Graphics
       pkgs.gimp
