@@ -10,9 +10,9 @@ from libqtile import layout, bar, widget, hook
 from libqtile.lazy import lazy
 from typing import List  # noqa: F401
 
-mod = "mod4"              # Sets mod key to SUPER/WINDOWS
-myTerm = "alacritty"      # My terminal of choice
-myBrowser = "qutebrowser" # My browser of choice
+mod         = "mod4"        # Sets mod key to SUPER/WINDOWS
+myTerm      = "kitty"       # My terminal of choice
+myBrowser   = "librewolf"   # My browser of choice
 
 keys = [
          ### The essentials

@@ -96,11 +96,15 @@
 
       # Enable all the (nerdy) window managers.
       windowManager = {
+        # Dynamic tiling
+        leftwm = { enable = true; };
+        dwm = { enable = true; };
+        qtile = { enable = true; };
+        awesome = { enable = true; };
+        # Manual tiling
         i3 = { enable = true; package = pkgs.i3-gaps; };
         bspwm = { enable = true; };
-        leftwm = { enable = true; };
-        qtile = { enable = true; };
-        dwm = { enable = true; };
+        # Floating
       };
     };
 
