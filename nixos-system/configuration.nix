@@ -88,10 +88,12 @@
       
       # Enable the KDE Plasma Desktop Environment.
       displayManager = {
-        sddm.enable = true;
+        # sddm.enable = true;
+        gdm.enable = true;
       };
       desktopManager = {
         plasma5.enable = true;
+        gnome.enable = true;
       };
 
       # Enable all the (nerdy) window managers.
