@@ -13,7 +13,12 @@
     };
   };
 
-  outputs = { nixpkgs, nixpkgs-unstable, nixpkgs-stable, home-manager, ... }:
+  outputs =  inputs @ {
+    nixpkgs,
+    nixpkgs-unstable,
+    nixpkgs-stable,
+    home-manager,
+    ... }:
   let
     system = "x86_64-linux";
     
@@ -64,7 +69,7 @@
         
         modules = [
           # Overlays-module makes "pkgs.unstable" available in home.nix
-          ({ config, pkgs, ... }: { nixpkgs.overlays = [ overlay-unstable ]; })
+          ({ config, pkgs, ... }: { nixpkgs.overlays = [ overlay-unstable overlay-stable ]; })
           ./nixos-system/configuration.nix
         ];
       };
