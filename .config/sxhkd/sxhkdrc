@@ -67,15 +67,15 @@ super + Escape
 Print
 	ksnip
 
-# rectangular area
+# rectangular area capture
 super + Print
 	ksnip -r
 
-# active window
+# active window capture
 super + shift + Print
 	ksnip -a
 
-# fullscreen
+# fullscreen capture
 super + control + Print
 	ksnip -f
 
