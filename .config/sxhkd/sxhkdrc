@@ -101,8 +101,7 @@ super + period
 
 # lock
 super + l
-	# ~/.config/bspwm/lock-screen.sh
-	~/.dotfiles/.config/bspwm/lock-screen.sh
+	~/.dotfiles/.config/sxhkd/lock-screen.sh
 
 # quit/restart bspwm
 super + {shift + }r
