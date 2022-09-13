@@ -99,7 +99,6 @@
         i3 = { enable = true; package = pkgs.i3-gaps; };
         bspwm = { enable = true; };
         leftwm = { enable = true; };
-        awesome = { enable = true; };
         qtile = { enable = true; };
       };
     };
