@@ -34,7 +34,7 @@ zle -N accept-line expand-alias-and-accept-line
 
 
 # SET ENVIRONMENTAL VARIABLES
-export EDITOR="nvim"
+export EDITOR="emacsclient -c -a 'emacs'"
 export TERMINAL="kitty"
 export BROWSER="librewolf"
 
@@ -71,6 +71,7 @@ abbrev-alias e="$EDITOR"
 abbrev-alias nv="nvim"
 abbrev-alias sv="spacevim"
 abbrev-alias svim="spacevim"
+abbrev-alias emacs="emacsclient -c -a 'emacs'"
 abbrev-alias py="python3"
 
 # Filesystem shortcuts
