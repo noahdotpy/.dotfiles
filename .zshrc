@@ -71,7 +71,7 @@ abbrev-alias e="$EDITOR"
 abbrev-alias nv="nvim"
 abbrev-alias sv="spacevim"
 abbrev-alias svim="spacevim"
-abbrev-alias emacs="emacsclient -c -a 'emacs'"
+abbrev-alias emacsc="emacsclient -c -a 'emacs'"
 abbrev-alias py="python3"
 
 # Filesystem shortcuts

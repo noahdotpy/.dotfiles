@@ -18,6 +18,13 @@ in
   home.username = "noah";
   home.homeDirectory = "/home/noah";
 
+  services = {
+    emacs = {
+      enable = true;
+      defaultEditor = true;
+    };
+  };
+
   programs = {
     kitty = {
       enable = true;
