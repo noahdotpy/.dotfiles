@@ -29,6 +29,10 @@ require('packer').startup(function(use)
   use 'folke/tokyonight.nvim' -- Tokyo night theme for neovim
 
   use 'glepnir/dashboard-nvim' -- Dashboard for neovim
+  use 'kyazdani42/nvim-tree.lua' -- File tree browser
+  use {'akinsho/bufferline.nvim', tag = "v2.*", requires = 'kyazdani42/nvim-web-devicons'} -- Bufferline to show buffers in a line
+  use 'ethanholz/nvim-lastplace'
+  use "steelsojka/pears.nvim" -- Auto pairs ( -> ()
 
   -- language supports
   use 'ron-rs/ron.vim' -- .ron support
@@ -118,7 +122,18 @@ vim.g.maplocalleader = ' '
 -- See `:help vim.keymap.set()`
 vim.keymap.set({ 'n', 'v' }, '<Space>', '<Nop>', { silent = true })
 
-vim.keymap.set({ 'n', 'v' }, '<leader>a', 'gg<S-v>G', { silent = true })
+vim.keymap.set('n', '<leader>e', ':NvimTreeToggle<CR>', { silent = true })
+
+-- File operations
+vim.keymap.set('n', '<C-s>', ':w<CR>', { silent = true }) -- Save current buffer
+vim.keymap.set('n', '<C-M-s>', ':wa<CR>', { silent = true }) -- Save all buffers
+vim.keymap.set('n', '<C-q>', ':wqa<CR>', { silent = true }) -- 
+
+-- Splits keybinds
+vim.keymap.set('n', '<C-h>', '<C-w>h', { silent = true })
+vim.keymap.set('n', '<C-j>', '<C-w>j', { silent = true })
+vim.keymap.set('n', '<C-k>', '<C-w>k', { silent = true })
+vim.keymap.set('n', '<C-l>', '<C-w>l', { silent = true })
 
 -- Remap for dealing with word wrap
 vim.keymap.set('n', 'k', "v:count == 0 ? 'gk' : 'k'", { expr = true, silent = true })
@@ -188,6 +203,14 @@ require('telescope').setup {
 -- Enable telescope fzf native, if installed
 pcall(require('telescope').load_extension, 'fzf')
 
+require("nvim-tree").setup()
+
+require("bufferline").setup{}
+
+require'nvim-lastplace'.setup{}
+
+require "pears".setup()
+
 local home = os.getenv('HOME')
 local db = require('dashboard')
 -- linux
@@ -214,7 +237,7 @@ db.custom_center = {
   shortcut = 'SPC f w'},
   {icon = '  ',
   desc = 'Open Personal dotfiles                  ',
-  action = 'Telescope dotfiles path=' .. home ..'/.dotfiles',
+  action = 'e ~/.dotfiles',
   shortcut = 'SPC f d'},
 }
 

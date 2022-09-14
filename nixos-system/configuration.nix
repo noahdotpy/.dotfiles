@@ -255,6 +255,7 @@
     pkgs.gcc
     pkgs.glibc
     pkgs.python311
+    pkgs.cargo
 
     # Miscellaneous
     pkgs.onlyoffice-bin
