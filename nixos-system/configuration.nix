@@ -99,7 +99,6 @@
         # Dynamic tiling
         qtile = { enable = true; };
         # Manual tiling
-        i3 = { enable = true; package = pkgs.i3-gaps; };
         bspwm = { enable = true; };
         # Floating
       };
