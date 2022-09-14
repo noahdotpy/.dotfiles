@@ -102,7 +102,7 @@ super + period
 #
 
 # lock
-super + l
+super + shift + control + l
 	~/.scripts/lock-screen.sh
 
 # quit/restart bspwm
