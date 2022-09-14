@@ -49,17 +49,19 @@ super + alt + r
 # programs
 #
 
-super + s
-
+# Open browser
 super + b
 	librewolf
 
+# Open editor
 super + e
 	kitty -e nvim
 
+# Open file manager
 super + f
 	nautilus
 
+# Open system monitor
 super + Escape
 	kitty -e htop
 

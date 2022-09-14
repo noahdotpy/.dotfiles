@@ -27,7 +27,6 @@ in
   programs = {
 
     neovim.enable = true;
-    neovim.defaultEditor = true;
 
     kitty = {
       enable = true;
