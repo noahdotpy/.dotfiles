@@ -52,6 +52,9 @@ abbrev-alias roficonf="~/.config/rofi"
 abbrev-alias i3conf="~/.config/i3"
 abbrev-alias nvconf="~/.config/nvim"
 abbrev-alias pbconf="~/.config/polybar"
+abbrev-alias bspwmconf="~/.config/bspwm"
+abbrev-alias qtileconf="~/.config/qtile"
+abbrev-alias sxhkdconf="~/.config/sxhkd"
 
 # NixOS shortcuts
 abbrev-alias nixc="/home/noah/.dotfiles/nixos-system/"
@@ -63,7 +66,7 @@ abbrev-alias nixapplyusrs="~/.dotfiles/.scripts/users-apply"
 
 # NixOS Home Manager shortcuts
 abbrev-alias hman="home-manager"
-abbrev-alias ehmanc="$EDITOR /home/noah/.dotfiles/nixos-homemanager"
+abbrev-alias hmanc="/home/noah/.dotfiles/nixos-homemanager"
 
 # Program shortcuts
 abbrev-alias e="$EDITOR"
