@@ -30,7 +30,7 @@ let
 in {
   home.sessionVariables = {
     BROWSER = "librewolf";
-    EDITOR = "emacsclient -c -a 'emacs'";
+    EDITOR = "nvim";
     TERMINAL = "kitty";
     TERM = "kitty";
   };

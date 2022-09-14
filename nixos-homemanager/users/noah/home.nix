@@ -21,11 +21,14 @@ in
   services = {
     emacs = {
       enable = true;
-      defaultEditor = true;
     };
   };
 
   programs = {
+
+    neovim.enable = true;
+    neovim.defaultEditor = true;
+
     kitty = {
       enable = true;
       theme = "Tokyo Night";

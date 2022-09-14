@@ -34,7 +34,7 @@ zle -N accept-line expand-alias-and-accept-line
 
 
 # SET ENVIRONMENTAL VARIABLES
-export EDITOR="emacsclient -c -a 'emacs'"
+export EDITOR="nvim"
 export TERMINAL="kitty"
 export BROWSER="librewolf"
 
