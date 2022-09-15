@@ -61,7 +61,7 @@ bindsym $mod+Shift+F1 exec kitty -e pulsemixer
 floating_modifier $mod
 
 # toggle touchpad 
-bindsym $mod+Ctrl+t exec ~/.scripts/toggle_touchpad.sh
+bindsym $mod+Ctrl+t exec ~/.scripts/github.com/noahdotpy/.dotfiles/toggle_touchpad.sh
 
 # Keybinds for opening apps
 # Open a terminal
@@ -92,7 +92,7 @@ bindsym $mod+d exec "rofi -modi 'combi' -show combi -show-icons"
 # clipboard Manager
 bindsym $mod+v exec "rofi -modi 'clipboard:greenclip print' -show clipboard -run-command '{cmd}'"
 # keybinding to open rofi-power-menu
-bindsym $mod+Shift+Escape exec "~/.scripts/rofi-powermenu.sh"
+bindsym $mod+Shift+Escape exec "~/.scripts/github.com/noahdotpy/.dotfiles/rofi-powermenu.sh"
 # keybinding to open rofi emoji menu
 bindsym $mod+period exec "rofi -modi emoji -show emoji"
 

@@ -8,7 +8,7 @@ super + Return
 
 # touchpad
 super + control+t
-	~/.scripts/toggle_touchpad.sh
+	~/.scripts/github.com/noahdotpy/.dotfiles/toggle_touchpad.sh
 
 # media keybinds
 
@@ -92,7 +92,7 @@ super + v
 	rofi -modi 'clipboard:greenclip print' -show clipboard -run-command '{cmd}'
 
 super + shift + Escape
-	~/.scripts/rofi-powermenu.sh
+	~/.scripts/github.com/noahdotpy/.dotfiles/rofi-powermenu.sh
 
 super + period
 	rofi -modi emoji -show emoji
@@ -103,7 +103,7 @@ super + period
 
 # lock
 super + shift + control + l
-	~/.scripts/lock-screen.sh
+	~/.scripts/github.com/noahdotpy/.dotfiles/lock-screen.sh
 
 # quit/restart bspwm
 super + {shift + }r
