@@ -33,8 +33,8 @@ done
 
 for FILE in .scripts/*
 do
-    echo "Making sym-link: $CURR_DIR/$FILE -> ~/$FILE"
     ln -s -f $RAW_CURR_DIR/$FILE ~/.scripts/
+    echo "Making sym-link: $CURR_DIR/$FILE -> ~/$FILE"
 done
 
 echo "Making sym-link: $CURR_DIR/.zshrc -> ~/.zshrc"
