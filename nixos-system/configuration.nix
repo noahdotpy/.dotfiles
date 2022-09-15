@@ -184,6 +184,9 @@
   nixpkgs.config.allowUnfree = true;
   nixpkgs.config.allowUnfreePredicate = _: true;
 
+  # Optimise store
+  nix.settings.auto-optimise-store = true;
+
   # List packages installed in system profile. To search, run:
   # $ nix search wget
   environment.systemPackages = [

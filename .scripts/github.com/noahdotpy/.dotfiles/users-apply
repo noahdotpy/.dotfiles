@@ -1,7 +1,5 @@
 #!/bin/sh
 pushd ~/.dotfiles
 echo "Applying user configurations..."
-nix build '.#homeManagerConfigurations.noah.activationPackage'
-./result/activate
-rm result
+home-manager switch --flake .
 popd

@@ -46,7 +46,7 @@
     
   in {
 
-    homeManagerConfigurations = {
+    homeConfigurations = {
       noah = home-manager.lib.homeManagerConfiguration {
         pkgs = pkgs;
         modules = [
