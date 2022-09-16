@@ -15,7 +15,7 @@
     fontDir.enable = true;
     enableDefaultFonts = true;
     fonts = [
-      pkgs.nerdfonts
+      (pkgs.nerdfonts.override { fonts = [ "Iosevka" ]; })
     ];
   };
 
