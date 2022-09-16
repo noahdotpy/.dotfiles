@@ -220,7 +220,6 @@
     pkgs.ranger
 
     # Tools
-    pkgs.deja-dup
     pkgs.ark
     pkgs.ksnip
     pkgs.unzip

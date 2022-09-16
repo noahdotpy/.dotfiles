@@ -73,6 +73,7 @@ in
       pkgs.virt-manager
       pkgs.qbittorrent
       pkgs.mailspring
+      pkgs.pika-backup
   ];
   
   # This value determines the Home Manager release that your
