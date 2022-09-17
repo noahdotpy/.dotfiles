@@ -1,25 +1,24 @@
 # !/usr/bin/env bash
 
-CURR_DIR=$([[ "$PWD/" == "${HOME%/}/"* ]] && printf '~%s\n' "${PWD#"${HOME%/}"}")
-RAW_CURR_DIR=$(pwd)
+CURR_DIR=$(pwd)
 
 if [[ $1 == "--replace-existing" ]]
 then
     echo "Replacing existing files..."
 
-    mkdir ~/.config/
     for FILE in .config/*
     do
         echo "Removing ~/$FILE for replacement."
         rm -rf ~/$FILE
     done
+    mkdir ~/.config/
 
-    mkdir ~/.scripts/
     for FILE in .scripts/*
     do
         echo "Removing ~/$FILE for replacement."
         rm -rf ~/$FILE
     done
+    mkdir ~/.scripts/
 
     echo "Removing ~/.zshrc for replacement."
     rm -rf ~/.zshrc
@@ -28,14 +27,14 @@ fi
 for FILE in .config/*
 do
     echo "Making sym-link: $CURR_DIR/$FILE -> ~/$FILE"
-    ln -s -f $RAW_CURR_DIR/$FILE ~/.config/
+    ln -s -f $CURR_DIR/$FILE ~/.config/
 done
 
 for FILE in .scripts/*
 do
-    ln -s -f $RAW_CURR_DIR/$FILE ~/.scripts/
     echo "Making sym-link: $CURR_DIR/$FILE -> ~/$FILE"
+    ln -s -f $CURR_DIR/$FILE ~/.scripts/
 done
 
 echo "Making sym-link: $CURR_DIR/.zshrc -> ~/.zshrc"
-ln -s -f $RAW_CURR_DIR/.zshrc ~
+ln -s -f $CURR_DIR/.zshrc ~

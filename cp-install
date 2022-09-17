@@ -1,0 +1,16 @@
+# !/usr/bin/env bash
+
+for FILE in .config/*
+do
+    cp -r $FILE ~/.config/
+    echo "Copying: $FILE -> ~/$FILE"
+done
+
+for FILE in .scripts/*
+do
+    cp -r $FILE ~/.scripts/
+    echo "Copying: $FILE -> ~/$FILE"
+done
+
+echo "Copying: .zshrc -> ~/.zshrc"
+cp .zshrc ~
