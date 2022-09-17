@@ -15,6 +15,19 @@ vim.g.maplocalleader = ' '
 
 vim.keymap.set({ 'n', 'v' }, '<Space>', '<Nop>', { silent = true })
 
+-- Disable the arrow keys
+vim.keymap.set({ 'n', 'v' }, '<Up>', '<Nop>', { silent = true })
+vim.keymap.set({ 'n', 'v' }, '<Down>', '<Nop>', { silent = true })
+vim.keymap.set({ 'n', 'v' }, '<Left>', '<Nop>', { silent = true })
+vim.keymap.set({ 'n', 'v' }, '<Right>', '<Nop>', { silent = true })
+
+--------------------------
+--- => FILE CONTENT <= ---
+--------------------------
+
+vim.keymap.set('n', '<S-Tab>', '<<', { silent = true, desc = '[Shift+Tab] Unindent line' })
+vim.keymap.set('n', '<Tab>', '>>', { silent = true, desc = '[Tab] Indent line' })
+
 ------------------------
 --- => UI TOGGLES <= ---
 ------------------------
@@ -53,6 +66,7 @@ vim.keymap.set('n', '<C-q>', ':wqa<CR>', { silent = true }) -- Save all buffers 
 --- => SPLITS <= ---
 --------------------
 
+-- Navigate splits
 vim.keymap.set('n', '<C-h>', '<C-w>h', { silent = true })
 vim.keymap.set('n', '<C-j>', '<C-w>j', { silent = true })
 vim.keymap.set('n', '<C-k>', '<C-w>k', { silent = true })
@@ -62,6 +76,7 @@ vim.keymap.set('n', '<C-l>', '<C-w>l', { silent = true })
 --- => FIXES <= ---
 --------------------
 
+-- Line wrapping navigation fix
 vim.keymap.set('n', 'k', "v:count == 0 ? 'gk' : 'k'", { expr = true, silent = true })
 vim.keymap.set('n', 'j', "v:count == 0 ? 'gj' : 'j'", { expr = true, silent = true })
 

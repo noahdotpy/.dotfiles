@@ -50,6 +50,8 @@ in
       pkgs.kate
       pkgs.emacs # text editor + tetris + turns your computer into a rocket ship + oh yeah elden ring comes pre-installed as well
 
+      pkgs.sumneko-lua-language-server
+
       # Theming
       pkgs.papirus-icon-theme
       pkgs.tela-circle-icon-theme
