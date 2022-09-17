@@ -175,10 +175,11 @@
 
     mouse = {
       accelProfile = "flat"; 
-      naturalScrolling = true;
+      naturalScrolling = false;
     };
     touchpad = {
       accelProfile = "flat";
+      naturalScrolling = true;
       sendEventsMode = "disabled-on-external-mouse";
     };
   };
