@@ -71,6 +71,10 @@ abbrev-alias hmanc="$HOME/.dotfiles/nixos-homemanager"
 # Program shortcuts
 abbrev-alias e="$EDITOR"
 
+abbrev-alias x="clear"
+
+abbrev-alias gs="git status"
+
 abbrev-alias nv="nvim"
 abbrev-alias sv="spacevim"
 abbrev-alias svim="spacevim"
