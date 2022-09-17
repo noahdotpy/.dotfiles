@@ -25,6 +25,7 @@ require('packer').startup(function(use)
   use 'lukas-reineke/indent-blankline.nvim'                                       -- Add indentation guides even on blank lines
   use 'tpope/vim-sleuth'                                                          -- Detect tabstop and shiftwidth automatically
   use { 'nvim-telescope/telescope.nvim', requires = { 'nvim-lua/plenary.nvim' } } -- Fuzzy Finder (files, lsp, etc)
+  use { "nvim-telescope/telescope-file-browser.nvim" }                            -- File browser extension for telescope
   use { "catppuccin/nvim", as = "catppuccin" } -- Catppuccin theme for neovim
   use 'folke/tokyonight.nvim' -- Tokyo night theme for neovim
 
@@ -32,7 +33,8 @@ require('packer').startup(function(use)
   use 'kyazdani42/nvim-tree.lua' -- File tree browser
   use {'akinsho/bufferline.nvim', tag = "v2.*", requires = 'kyazdani42/nvim-web-devicons'} -- Bufferline to show buffers in a line
   use 'ethanholz/nvim-lastplace'
-  use "steelsojka/pears.nvim" -- Auto pairs ( -> ()
+  use 'steelsojka/pears.nvim' -- Auto pairs ( -> ()
+  use 'folke/which-key.nvim'
 
   -- language supports
   use 'ron-rs/ron.vim' -- .ron support
@@ -165,6 +167,8 @@ require('lualine').setup {
 vim.g.catppuccin_flavour = "macchiato" -- latte, frappe, macchiato, mocha
 require("catppuccin").setup()
 
+require("which-key").setup()
+
 -- Enable Comment.nvim
 require('Comment').setup()
 
@@ -202,6 +206,7 @@ require('telescope').setup {
 
 -- Enable telescope fzf native, if installed
 pcall(require('telescope').load_extension, 'fzf')
+pcall(require("telescope").load_extension, "file_browser")
 
 require("nvim-tree").setup()
 
@@ -222,7 +227,7 @@ db.custom_center = {
   {icon = '  ',
   desc = 'Recently opened files                   ',
   action =  'DashboardFindHistory',
-  shortcut = 'SPC f h'},
+  shortcut = 'SPC f r'},
   {icon = '  ',
   desc = 'Find  File                              ',
   action = 'Telescope find_files find_command=rg,--hidden,--files',
@@ -242,7 +247,9 @@ db.custom_center = {
 }
 
 -- See `:help telescope.builtin`
-vim.keymap.set('n', '<leader>?', require('telescope.builtin').oldfiles, { desc = '[?] Find recently opened files' })
+vim.keymap.set('n', '<leader>fr', require('telescope.builtin').oldfiles, { desc = '[fr] Find recently opened files' })
+vim.keymap.set('n', '<leader>fb', '<CMD>Telescope file_browser<CR>' { desc = '[fb] Open file browser' })
+vim.keymap.set('n', '<leader>ff', require('telescope.builtin').find_files, { desc = '[ff] Find files' })
 vim.keymap.set('n', '<leader><space>', require('telescope.builtin').buffers, { desc = '[ ] Find existing buffers' })
 vim.keymap.set('n', '<leader>/', function()
   -- You can pass additional configuration to telescope to change theme, layout, etc.
