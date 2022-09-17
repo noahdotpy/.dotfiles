@@ -247,9 +247,9 @@ db.custom_center = {
 }
 
 -- See `:help telescope.builtin`
-vim.keymap.set('n', '<leader>fr', '<CMD>Telescope oldfiles', { desc = '[fr] Find recently opened files' })
-vim.keymap.set('n', '<leader>fb', '<CMD>Telescope file_browser<CR>' { desc = '[fb] Open file browser' })
-vim.keymap.set('n', '<leader>ff', '<CMD>Telescope find_files', { desc = '[ff] Find files' })
+vim.keymap.set('n', '<leader>fr', require('telescope.builtin').oldfiles, { desc = '[fr] Find recently opened files' })
+vim.keymap.set('n', '<leader>fb', require "telescope".extensions.file_browser.file_browser, { desc = '[fb] Open file browser' })
+vim.keymap.set('n', '<leader>ff', require('telescope.builtin').find_files, { desc = '[ff] Find files' })
 vim.keymap.set('n', '<leader><space>', require('telescope.builtin').buffers, { desc = '[ ] Find existing buffers' })
 vim.keymap.set('n', '<leader>/', function()
   -- You can pass additional configuration to telescope to change theme, layout, etc.
