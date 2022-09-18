@@ -62,6 +62,7 @@ in
       # TUI/CLI
       pkgs.unstable.glances
       pkgs.gh
+      pkgs.xclip
 
       # Terminal Emulators
       pkgs.alacritty
