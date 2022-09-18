@@ -2,6 +2,7 @@
 
 pgrep -x sxhkd > /dev/null || sxhkd &
 
+picom &
 nitrogen --restore &
 dunst &
 ~/.config/polybar/launch.sh &
