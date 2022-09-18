@@ -45,6 +45,9 @@ vim.cmd [[colorscheme tokyonight-night]]
 -- Set completeopt to have a better completion experience
 vim.o.completeopt = 'menuone,noselect'
 
+vim.o.splitbelow = true -- Split below 
+vim.o.splitright = true -- Split to the right
+
 -- [[ Highlight on yank ]]
 -- See `:help vim.highlight.on_yank()`
 local highlight_group = vim.api.nvim_create_augroup('YankHighlight', { clear = true })

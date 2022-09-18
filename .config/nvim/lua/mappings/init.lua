@@ -28,6 +28,10 @@ vim.keymap.set({ 'n', 'v' }, '<Space>', '<Nop>', { silent = true })
 vim.keymap.set('n', '<S-Tab>', '<<', { silent = true, desc = '[Shift+Tab] Unindent line' })
 vim.keymap.set('n', '<Tab>', '>>', { silent = true, desc = '[Tab] Indent line' })
 
+-- System clipboard
+vim.keymap.set({'n', 'v'}, '<leader>y', '"+y', { desc = '[Leader+y] Yank to system clipboard' })
+vim.keymap.set({'n', 'v'}, '<leader>p', '"+p', { silent = true, desc = '[Leader+p] Paste from system clipboard' })
+
 ------------------------
 --- => UI TOGGLES <= ---
 ------------------------
