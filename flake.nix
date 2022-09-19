@@ -50,8 +50,9 @@
       noah = home-manager.lib.homeManagerConfiguration {
         pkgs = pkgs;
         modules = [
+          # Make the overlays available
           ({ config, pkgs, ... }: { nixpkgs.overlays = [ overlay-unstable overlay-stable ]; })
-          ./nixos-homemanager/users/noah/home.nix
+          ./users/noah/home.nix
           {
             home = {
               username = "noah";
@@ -68,9 +69,9 @@
         inherit system;
         
         modules = [
-          # Overlays-module makes "pkgs.unstable" available in home.nix
+          # Make the overlays available
           ({ config, pkgs, ... }: { nixpkgs.overlays = [ overlay-unstable overlay-stable ]; })
-          ./nixos-system/configuration.nix
+          ./hosts/ideapad-s145/configuration.nix
         ];
       };
     };
