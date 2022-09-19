@@ -65,7 +65,7 @@
     };
     
     nixosConfigurations = {
-      nix = lib.nixosSystem {
+      ideapad-s145 = lib.nixosSystem {
         inherit system;
         
         modules = [

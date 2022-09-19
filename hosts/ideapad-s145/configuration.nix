@@ -33,7 +33,7 @@
 
   networking = {
 
-    hostName = "nix";
+    hostName = "ideapad-s145";
 
     # Enable networking
     networkmanager.enable = true;
