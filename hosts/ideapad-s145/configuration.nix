@@ -19,16 +19,42 @@
     ];
   };
 
-  # Enable Grub2 bootloader.
-  boot.loader = {
-    grub = {
-      enable = true;
-      efiSupport = true;
-      device = "nodev";
-      efiInstallAsRemovable = true;
+  # Enable the bootloader.
+  boot = {
+    # Setup keyfile
+    initrd = {
+      secrets = {
+        "/crypto_keyfile.bin" = null;
+      };
+
+      # Enable swap on luks
+      luks.devices = {
+        "luks-5013743b-7142-4c41-88ab-fe9abb872951" = {
+          device = "/dev/disk/by-uuid/5013743b-7142-4c41-88ab-fe9abb872951";
+          keyFile = "/crypto_keyfile.bin";
+        };
+      };
     };
-    efi.efiSysMountPoint = "/boot/efi";
-    timeout = 1;
+
+    loader = {
+
+      systemd-boot = {
+        enable = true;
+      };
+
+      # grub = {
+      #   enable = true;
+      #   efiSupport = true;
+      #   device = "nodev";
+      #   efiInstallAsRemovable = true;
+      # };
+
+      efi = {
+        canTouchEfiVariables = true;
+        efiSysMountPoint = "/boot/efi";
+      };
+      timeout = 1;
+    };
   };
 
   networking = {
