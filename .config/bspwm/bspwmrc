@@ -1,4 +1,4 @@
-#! /bin/sh
+#! /usr/bin/env bash
 
 pgrep -x sxhkd > /dev/null || sxhkd &
 
@@ -9,24 +9,19 @@ dunst &
 greenclip daemon &
 flatpak run com.getmailspring.Mailspring --background &
 
-# Turn off system BEEP
-xset b off &
-xset b 0 0 0 &
+WORKSPACES_AS_STRING=""
+for i in {1..10}
+do
+  # Define var to use for bspc monitor -d
+  WORKSPACES_AS_STRING="$WORKSPACES_AS_STRING $i"
+
+  # Setting layouts with bsp-layout
+  bsp-layout set tall $i --master-size 0.5
+done
 
 # Workspaces
-bspc monitor -d 1 2 3 4 5 6 7 8 9 10
+bspc monitor -d $WORKSPACES_AS_STRING
 
-# Setting layouts with bsp-layout
-bsp-layout set tall 1 --master-size 0.5
-bsp-layout set tall 2 --master-size 0.5
-bsp-layout set tall 3 --master-size 0.5
-bsp-layout set tall 4 --master-size 0.5
-bsp-layout set tall 5 --master-size 0.5
-bsp-layout set tall 6 --master-size 0.5
-bsp-layout set tall 7 --master-size 0.5
-bsp-layout set tall 8 --master-size 0.5
-bsp-layout set tall 9 --master-size 0.5
-bsp-layout set tall 10 --master-size 0.5
 
 bspc config border_width         1
 bspc config window_gap           8
@@ -34,6 +29,10 @@ bspc config window_gap           8
 bspc config split_ratio          0.52
 bspc config borderless_monocle   false
 bspc config gapless_monocle      false
+
+# Turn off system BEEP
+xset b off &
+xset b 0 0 0 &
 
 # bspc config pointer_follows_focus true
 bspc config focus_follows_pointer true
