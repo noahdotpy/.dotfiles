@@ -38,6 +38,10 @@ in
   };
 
   home.packages = [
+      # Layouts in bspwm
+      pkgs.bsp-layout
+      pkgs.bc
+
       # Programming languages
       pkgs.unstable.go_1_19
 
