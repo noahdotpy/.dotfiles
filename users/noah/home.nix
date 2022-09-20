@@ -81,6 +81,7 @@ in
       pkgs.qbittorrent
       pkgs.mailspring
       pkgs.pika-backup
+      pkgs.devour # window swallowing
   ];
   
   # This value determines the Home Manager release that your
