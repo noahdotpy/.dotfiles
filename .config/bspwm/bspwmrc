@@ -7,7 +7,7 @@ nitrogen --restore &
 dunst &
 ~/.config/polybar/launch.sh &
 greenclip daemon &
-flatpak run com.getmailspring.Mailspring --background &
+mailspring --background &
 
 WORKSPACES_AS_STRING=""
 for i in {1..10}
