@@ -16,9 +16,9 @@ FORMAT=""
 # Battery icon to reflect on the bar.
 if [[ "${BATTERY_INFO[5]}" == *"remaining"* ]] || [[ "${BATTERY_INFO[5]}" == *"discharging"* ]]
 then
-    ICON="   "
+    ICON=""
 else
-    ICON="  "
+    ICON=""
 fi
 
 # charging status with same background color
