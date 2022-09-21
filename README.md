@@ -16,6 +16,6 @@ Make sure you have placed the configs in the correct places or use one of the in
 
 ### Neovim
 
-`nvim +PackerSync`
+`$ nvim +PackerSync`
 
 ### 
