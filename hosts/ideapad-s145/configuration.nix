@@ -91,6 +91,8 @@
 
   # Enable the X11 windowing system.
   services = {
+
+    udev.packages = [ pkgs.gnome.gnome-settings-daemon ];
     
     # Enable gnome keyring.
     gnome.gnome-keyring.enable = true;
@@ -114,10 +116,12 @@
       
       # Enable the KDE Plasma Desktop Environment.
       displayManager = {
-        sddm.enable = true;
+        # sddm.enable = true;
+        gdm.enable = true;
       };
       desktopManager = {
         plasma5.enable = true;
+        gnome.enable = true;
       };
 
       # Enable all the (nerdy) window managers.
@@ -295,6 +299,15 @@
     pkgs.glibc
     pkgs.python311
     pkgs.cargo
+
+    # LSP
+    pkgs.rnix-lsp # Nix
+    pkgs.sumneko-lua-language-server # Lua
+    pkgs.nodePackages.pyright # Python
+    # pkgs.nodePackages_latest.typescript-language-server # Typescript
+
+    # GNOME Extensions
+    pkgs.gnomeExtensions.just-perfection
 
     # Miscellaneous
     pkgs.onlyoffice-bin
