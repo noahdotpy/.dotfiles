@@ -26,7 +26,14 @@ in
 
   programs = {
 
-    neovim.enable = true;
+    neovim = {
+      enable = true;
+      extraConfig = ''
+      lua << EOF
+        ${builtins.readFile ./.config/nvim/init.lua}
+      EOF
+    '';
+    };
 
     kitty = {
       enable = true;
