@@ -118,6 +118,7 @@
       displayManager = {
         # sddm.enable = true;
         gdm.enable = true;
+        defaultSession = "plasma";
       };
       desktopManager = {
         plasma5.enable = true;
@@ -163,7 +164,7 @@
     # mtr.enable = true;
     gnupg.agent = {
       enable = true;
-      pinentryFlavor = "qt";
+      pinentryFlavor = "gnome3";
       # enableSSHSupport = true;
     };
 
