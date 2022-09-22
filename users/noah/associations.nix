@@ -1,5 +1,6 @@
 let
-  browser = ["librewolf.desktop"];
+  browser = [ "librewolf.desktop" ];
+  editor = [ "nvim" ];
 
   xdgAssociations = {
     "text/html" = browser;
@@ -16,7 +17,7 @@ let
     "application/x-extension-xhtml" = browser;
     "application/x-extension-xht" = browser;
 
-    # "text/*" = [ "emacs.desktop" ];
+    "text/*" = editor;
     "audio/*" = ["mpv.desktop"];
     "video/*" = ["mpv.dekstop"];
     "image/*" = ["imv.desktop"];
@@ -29,8 +30,8 @@ let
   };
 in {
   home.sessionVariables = {
-    BROWSER = "librewolf";
-    EDITOR = "nvim";
+    BROWSER = browser;
+    EDITOR = editor;
     TERMINAL = "kitty";
     TERM = "kitty";
   };

@@ -26,15 +26,6 @@ in
 
   programs = {
 
-    neovim = {
-      enable = true;
-      extraConfig = ''
-      lua << EOF
-        ${builtins.readFile ./.config/nvim/init.lua}
-      EOF
-    '';
-    };
-
     kitty = {
       enable = true;
       theme = "Tokyo Night";
@@ -53,8 +44,8 @@ in
       pkgs.unstable.go_1_19
 
       # Programming/Text Editors
-      pkgs.spacevim
-      pkgs.neovide # graphical client for neovim
+      # pkgs.spacevim
+      # pkgs.neovide # graphical client for neovim
       pkgs.vscode
       pkgs.jetbrains.pycharm-community
       pkgs.jetbrains.idea-community

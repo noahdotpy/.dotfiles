@@ -245,7 +245,7 @@
     # Text Editors
     pkgs.micro
     pkgs.vim
-    pkgs.neovim
+    # pkgs.neovim
     pkgs.notepadqq
     
     # CLI/TUI
