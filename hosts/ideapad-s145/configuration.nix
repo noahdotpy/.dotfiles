@@ -207,6 +207,7 @@ in
 
   # Enable virtualisation.
   virtualisation.libvirtd.enable = true;
+  virtualisation.virtualbox.host.enable = true;
 
   # Enable touchpad support (enabled default in most desktopManager).
   services.xserver.libinput = {
@@ -224,11 +225,17 @@ in
   };
 
   # Define a user account. Don't forget to set a password with `passwd` post-install.
-  users.users.noah = {
-    isNormalUser = true;
-    initialPassword = "temp";
-    extraGroups = [ "networkmanager" "wheel" "libvirtd" ];
-    shell = pkgs.zsh;
+  users = {
+    extraGroups.vboxusers.members = [ "user-with-access-to-virtualbox" ];
+
+    users = {
+      noah = {
+        isNormalUser = true;
+        initialPassword = "temp";
+        extraGroups = [ "networkmanager" "wheel" "libvirtd" ];
+        shell = pkgs.zsh;
+      };
+    };
   };
 
   # Allow unfree packages
