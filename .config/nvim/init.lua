@@ -38,9 +38,6 @@ vim.api.nvim_create_autocmd('BufWritePost', {
 --- MODULES ---
 ---------------
 
--- I should have more helpful messages for getting the config working
--- and also maybe bring back the packer bootstrapping over here and only require settings and mappings if bootstrap is happening to fix a bunch of "value not found" because a plugin isnt installed
-
 if not is_bootstrap then
   require 'settings'
   require 'mappings'
