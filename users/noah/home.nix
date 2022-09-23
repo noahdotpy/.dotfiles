@@ -8,7 +8,7 @@ in
   imports =
   [
       ./associations.nix
-      ./apps/text-editors/neovim
+      # ./apps/text-editors/neovim
   ];
 
   nixpkgs.config.allowUnfree = true;

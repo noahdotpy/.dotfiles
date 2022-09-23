@@ -2,8 +2,14 @@
 # your system.  Help is available in the configuration.nix(5) man page
 # and in the NixOS manual (accessible by running `nixos-help`).
 
-{ config, pkgs, ... }:
+{ config, pkgs, inputs, ... }:
 
+let
+  nur = import inputs.nurpkgs {
+    inherit pkgs;
+    nurpkgs = pkgs;
+  };
+in
 {
   imports =
   [
@@ -118,7 +124,7 @@
       displayManager = {
         # sddm.enable = true;
         gdm.enable = true;
-        defaultSession = "plasma";
+        defaultSession = "none+bspwm";
       };
       desktopManager = {
         plasma5.enable = true;
@@ -182,6 +188,8 @@
       };
     };
     starship.enable = true;
+
+	neovim.enable = true;
 
   };
 
@@ -261,6 +269,7 @@
     pkgs.gdu
     pkgs.ripgrep
     pkgs.ranger
+    pkgs.pfetch
 
     # Tools
     pkgs.ark

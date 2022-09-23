@@ -38,7 +38,9 @@ export EDITOR="nvim"
 export TERMINAL="kitty"
 export BROWSER="librewolf"
 
-# ADD ABBREVIATIONS
+#############################
+### ABBREVIATIONS/ALIASES ###
+#############################
 
 # Config shortcuts
 abbrev-alias conf="$HOME/config"
@@ -100,6 +102,16 @@ abbrev-alias wallpapers="$HOME/Pictures/Wallpapers"
 abbrev-alias vids="$HOME/Videos"
 abbrev-alias videos="$HOME/Videos"
 
+
+##########################
+### AUTOSTART PROGRAMS ###
+##########################
+
+pfetch
+
+#####################
+### MISCELLANEOUS ###
+#####################
 
 #THIS MUST BE AT THE END OF THE FILE FOR SDKMAN TO WORK!!!
 export SDKMAN_DIR="$HOME/.sdkman"

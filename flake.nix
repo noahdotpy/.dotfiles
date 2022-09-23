@@ -11,6 +11,8 @@
       url = "github:nix-community/home-manager";
       inputs.nixpkgs.follows = "nixpkgs";
     };
+
+    nurpkgs.url = "github:nix-community/NUR";
   };
 
   outputs =  inputs @ {
@@ -18,6 +20,7 @@
     nixpkgs-unstable,
     nixpkgs-stable,
     home-manager,
+    nurpkgs,
     ... }:
   let
     system = "x86_64-linux";
@@ -67,6 +70,7 @@
     nixosConfigurations = {
       ideapad-s145 = lib.nixosSystem {
         inherit system;
+        specialArgs = { inherit inputs; };
         
         modules = [
           # Make the overlays available
