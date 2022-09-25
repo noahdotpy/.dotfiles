@@ -7,7 +7,6 @@ nitrogen --restore &
 dunst &
 ~/.config/polybar/launch.sh &
 greenclip daemon &
-spotify-tray &
 
 WORKSPACES_AS_STRING=""
 for i in {1..10}
