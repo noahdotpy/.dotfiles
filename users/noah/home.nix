@@ -45,8 +45,8 @@ in
       pkgs.unstable.go_1_19
 
       # Programming/Text Editors
-      # pkgs.spacevim
-      # pkgs.neovide # graphical client for neovim
+      pkgs.spacevim
+      pkgs.neovide # graphical client for neovim
       pkgs.vscode
       pkgs.jetbrains.pycharm-community
       pkgs.jetbrains.idea-community
@@ -81,6 +81,10 @@ in
       pkgs.mailspring
       pkgs.pika-backup
       pkgs.devour # window swallowing
+
+      # Multi-media
+      pkgs.spotify
+      pkgs.spotify-tray
   ];
   
   # This value determines the Home Manager release that your

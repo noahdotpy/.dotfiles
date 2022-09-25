@@ -7,7 +7,7 @@ nitrogen --restore &
 dunst &
 ~/.config/polybar/launch.sh &
 greenclip daemon &
-mailspring --background &
+spotify-tray &
 
 WORKSPACES_AS_STRING=""
 for i in {1..10}
@@ -39,3 +39,4 @@ bspc config focus_follows_pointer true
 
 bspc rule -a ksnip state=floating
 bspc rule -a ".blueman-manager-wrapped" state=floating
+bspc rule -a *:*:Picture-in-Picture state=floating sticky=on
