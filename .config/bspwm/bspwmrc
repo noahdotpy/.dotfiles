@@ -39,3 +39,6 @@ bspc config focus_follows_pointer true
 bspc rule -a ksnip state=floating
 bspc rule -a ".blueman-manager-wrapped" state=floating
 bspc rule -a *:*:Picture-in-Picture state=floating sticky=on
+
+# Auto-start GUI Programs as a sort of welcome back type thing
+rofi -show drun &
