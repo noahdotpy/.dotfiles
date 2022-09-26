@@ -7,32 +7,58 @@
 BATTERY_INFO=($( acpi | awk -F',' '{ print $0 }'))
 
 # Formatting helpers
-CHARGE=($( echo ${BATTERY_INFO[3]} | sed 's/,//g' ))
-ICON=""
-FORMAT=""
 
-# echo ${BATTERY_INFO[5]}
-
-# Battery icon to reflect on the bar.
-if [[ "${BATTERY_INFO[5]}" == *"remaining"* ]] || [[ "${BATTERY_INFO[5]}" == *"discharging"* ]]
-then
-    ICON=""
-else
-    ICON=""
+if [[ "${BATTERY_INFO[2]}" == *"Charging"* ]]; then
+  STATUS="+"
+elif [[ "${BATTERY_INFO[2]}" == *"Discharging"* ]]; then
+  STATUS="-"
 fi
 
-# charging status with same background color
-# if [[ $CHARGE -lt 10 ]]; then
-#     FORMAT="%{B#18181}%{B#8c0a0a0a}  "
-# elif [[ $CHARGE -lt 30 ]]; then
-#     FORMAT="%{B#18181}%{B#8c0a0a0a}  "
-# elif [[ $CHARGE -lt 60 ]]; then
-#     FORMAT="%{B#18181}%{B#8c0a0a0a}  "
-# elif [[ $CHARGE -lt 100 ]]; then
-#     FORMAT="%{B#18181}%{B#8c0a0a0a}  "
-# fi
+CHARGE_UNFMT=($( echo ${BATTERY_INFO[3]} | sed 's/,//g' ))
+CHARGE=($(echo $CHARGE_UNFMT | awk -F '%' '{ print $1 }'))
+FORMAT=""
 
-# Format charge & color depending on the status.
+
+# Discharging
+if [[ $STATUS == "-" ]]; then
+  if (( $CHARGE <= 20 )); then # *-20
+    ICON=""
+  elif (( $CHARGE <= 30 )); then # 21-30
+    ICON=""
+  elif (( $CHARGE <= 40 )); then # 31-40
+    ICON=""
+  elif (( $CHARGE <= 60 )); then # 41-60
+    ICON=""
+  elif (( $CHARGE <= 80 )); then # 61-80
+    ICON=""
+  elif (( $CHARGE <= 95 )); then # 81-95
+    ICON=""
+  elif (( $CHARGE >= 96 )); then # 96-*
+    ICON=""
+  fi
+fi
+
+
+# Charging
+if [[ $STATUS == "+" ]]; then
+  if (( $CHARGE <= 20 )); then # *-20
+    ICON=""
+  elif (( $CHARGE <= 30 )); then # 21-30
+    ICON=""
+  elif (( $CHARGE <= 40 )); then # 31-40
+    ICON=""
+  elif (( $CHARGE <= 60 )); then # 41-60
+    ICON=""
+  elif (( $CHARGE <= 80 )); then # 61-80
+    ICON=""
+  elif (( $CHARGE <= 95 )); then # 81-95
+    ICON=""
+  elif (( $CHARGE >= 96 )); then # 96-*
+    ICON=""
+  fi
+fi
+
+# Format CHARGE & color depending on the status.
 FORMAT="$FORMAT $ICON $CHARGE"
 
 # Display on bar
