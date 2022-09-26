@@ -59,7 +59,7 @@ if [[ $STATUS == "+" ]]; then
 fi
 
 # Format CHARGE & color depending on the status.
-FORMAT="$FORMAT $ICON $CHARGE"
+FORMAT="$FORMAT $ICON $CHARGE%"
 
 # Display on bar
 echo $FORMAT
