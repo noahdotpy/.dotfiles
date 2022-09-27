@@ -1,0 +1,3 @@
+#!/usr/bin/env bash
+
+# Put your autostart here to be theme agnostic, for example if you want to start dmenu_run on login

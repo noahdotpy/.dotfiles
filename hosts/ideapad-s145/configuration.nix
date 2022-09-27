@@ -135,6 +135,7 @@ in
       windowManager = {
         # Dynamic tiling
         qtile = { enable = true; };
+        leftwm = { enable = true; };
         # Manual tiling
         bspwm = { enable = true; };
         # Floating
