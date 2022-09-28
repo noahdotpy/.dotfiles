@@ -326,6 +326,7 @@ in
 
     # GNOME Extensions
     pkgs.gnomeExtensions.just-perfection
+    pkgs.gnomeExtensions.pop-shell
 
     # Miscellaneous
     pkgs.onlyoffice-bin
