@@ -109,6 +109,8 @@ abbrev-alias videos="$HOME/Videos"
 
 pfetch
 
+eval "$(starship init zsh)"
+
 #####################
 ### MISCELLANEOUS ###
 #####################

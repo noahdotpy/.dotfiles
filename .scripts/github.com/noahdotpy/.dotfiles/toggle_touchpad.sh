@@ -4,7 +4,7 @@
 
 # get current state
 
-TOUCHPAD_ID=12
+TOUCHPAD_ID=13
 
 # SYNSTATE=$(synclient -l | grep TouchpadOff | awk '{ print $3 }')
 TOUCHPAD_STATE=$(xinput --list-props $TOUCHPAD_ID | grep "Device Enabled" | awk '{ print $4 }')
