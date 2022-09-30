@@ -45,7 +45,7 @@ key = "period"
 [[keybind]]
 command = "Execute"
 value = "kitty"
-modifier = ["modkey", "Shift"]
+modifier = ["modkey"]
 key = "Return"
 
 [[keybind]]
