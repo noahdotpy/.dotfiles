@@ -77,6 +77,8 @@ abbrev-alias x="clear"
 
 abbrev-alias gs="git status"
 
+abbrev-alias l="ls -ahl"
+
 abbrev-alias nv="nvim"
 abbrev-alias sv="spacevim"
 abbrev-alias svim="spacevim"
