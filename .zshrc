@@ -77,7 +77,8 @@ abbrev-alias x="clear"
 
 abbrev-alias gs="git status"
 
-abbrev-alias l="ls -ahl"
+abbrev-alias ls="exa"
+abbrev-alias l="exa -ahl"
 
 abbrev-alias nv="nvim"
 abbrev-alias sv="spacevim"
@@ -116,6 +117,8 @@ eval "$(starship init zsh)"
 #####################
 ### MISCELLANEOUS ###
 #####################
+
+export PATH="/home/noah/.cargo/bin:$PATH"
 
 #THIS MUST BE AT THE END OF THE FILE FOR SDKMAN TO WORK!!!
 export SDKMAN_DIR="$HOME/.sdkman"
