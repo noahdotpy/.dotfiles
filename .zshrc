@@ -81,6 +81,7 @@ abbrev-alias ls="exa"
 abbrev-alias l="exa -ahl"
 
 abbrev-alias nv="nvim"
+abbrev-alias lv="lvim"
 abbrev-alias sv="spacevim"
 abbrev-alias svim="spacevim"
 abbrev-alias emacsc="emacsclient -c -a 'emacs'"
