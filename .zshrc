@@ -76,10 +76,12 @@ abbrev-alias e="$EDITOR"
 abbrev-alias x="clear"
 
 abbrev-alias gs="git status"
+abbrev-alias lg="lazygit"
 
 abbrev-alias ls="exa"
 abbrev-alias l="exa -ahl"
 
+abbrev-alias hx="helix"
 abbrev-alias nv="nvim"
 abbrev-alias lv="lvim"
 abbrev-alias sv="spacevim"
