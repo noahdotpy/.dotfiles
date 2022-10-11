@@ -30,7 +30,7 @@ if [[ $STATE == "-" ]]; then
   elif (( $CHARGE <= 95 )); then # 81-95
     ICON=""
   elif (( $CHARGE >= 96 )); then # 96-*
-    ICON="WOW"
+    ICON=""
   fi
 fi
 
