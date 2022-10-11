@@ -1,3 +1,4 @@
 #! /bin/sh
-xlock -mode space
+# xlock -mode space
+betterlockscreen -l
 # kscreenlocker_greet
