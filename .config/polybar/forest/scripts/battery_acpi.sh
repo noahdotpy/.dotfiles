@@ -1,26 +1,22 @@
-## battery_detect_acpi.sh 
-
 #!/usr/bin/bash
 
-
-# Getting the data and initializing an array.
-BATTERY_INFO=($( acpi | awk -F',' '{ print $0 }'))
+BATTERY_INFO="upower -i /org/freedesktop/UPower/devices/battery_BAT0"
 
 # Formatting helpers
 
-if [[ "${BATTERY_INFO[2]}" == *"Charging"* ]]; then
-  STATUS="+"
-elif [[ "${BATTERY_INFO[2]}" == *"Discharging"* ]]; then
-  STATUS="-"
+STATE=$( $BATTERY_INFO | grep state | awk '{ print $2 }' )
+if [[ "$STATE" == "fully-charged" || "$STATE" == "charging" ]]; then
+  STATE="+"
+elif [[ "$STATE" == "discharging" ]]; then
+  STATE="-"
 fi
 
-CHARGE_UNFMT=($( echo ${BATTERY_INFO[3]} | sed 's/,//g' ))
-CHARGE=($(echo $CHARGE_UNFMT | awk -F '%' '{ print $1 }'))
+CHARGE=$( $BATTERY_INFO | grep percentage | awk '{ print $2 }' | awk -F '%' '{ print $1 }' )
 FORMAT=""
 
 
 # Discharging
-if [[ $STATUS == "-" ]]; then
+if [[ $STATE == "-" ]]; then
   if (( $CHARGE <= 20 )); then # *-20
     ICON=""
   elif (( $CHARGE <= 30 )); then # 21-30
@@ -34,13 +30,13 @@ if [[ $STATUS == "-" ]]; then
   elif (( $CHARGE <= 95 )); then # 81-95
     ICON=""
   elif (( $CHARGE >= 96 )); then # 96-*
-    ICON=""
+    ICON="WOW"
   fi
 fi
 
 
 # Charging
-if [[ $STATUS == "+" ]]; then
+if [[ $STATE == "+" ]]; then
   if (( $CHARGE <= 20 )); then # *-20
     ICON=""
   elif (( $CHARGE <= 30 )); then # 21-30
@@ -59,7 +55,6 @@ if [[ $STATUS == "+" ]]; then
 fi
 
 # Format CHARGE & color depending on the status.
-FORMAT="$FORMAT $ICON $CHARGE%"
-
+FORMAT="$FORMAT $ICON $CHARGE"
 # Display on bar
 echo $FORMAT
