@@ -73,6 +73,12 @@ abbrev-alias hmanc="$HOME/.dotfiles/users/noah"
 # Program shortcuts
 abbrev-alias e="$EDITOR"
 
+abbrev-alias enablecam="sudo modprobe uvcvideo"
+abbrev-alias enablecamera="sudo modprobe uvcvideo"
+
+abbrev-alias disablecam="sudo modprobe -r uvcvideo"
+abbrev-alias disablecamera="sudo modprobe -r uvcvideo"
+
 abbrev-alias x="clear"
 
 abbrev-alias gs="git status"
