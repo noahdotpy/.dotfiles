@@ -76,6 +76,10 @@ abbrev-alias e="$EDITOR"
 abbrev-alias enablecam="sudo modprobe uvcvideo"
 abbrev-alias enablecamera="sudo modprobe uvcvideo"
 
+abbrev-alias disablecamforce="sudo rmmod -f uvcvideo"
+abbrev-alias disablecameraforce="sudo rmmod -f uvcvideo"
+abbrev-alias disablecamforced="sudo rmmod -f uvcvideo"
+abbrev-alias disablecameraforced="sudo rmmod -f uvcvideo"
 abbrev-alias disablecam="sudo modprobe -r uvcvideo"
 abbrev-alias disablecamera="sudo modprobe -r uvcvideo"
 
