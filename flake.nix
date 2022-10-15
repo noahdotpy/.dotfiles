@@ -48,24 +48,6 @@
     lib = nixpkgs.lib;
     
   in {
-
-    homeConfigurations = {
-      noah = home-manager.lib.homeManagerConfiguration {
-        pkgs = pkgs;
-        modules = [
-          # Make the overlays available
-          ({ config, pkgs, ... }: { nixpkgs.overlays = [ overlay-unstable overlay-stable ]; })
-          ./users/noah/home.nix
-          {
-            home = {
-              username = "noah";
-              homeDirectory = "/home/noah";
-              stateVersion = "22.05";
-            };
-          }
-        ];
-      };
-    };
     
     nixosConfigurations = {
       ideapad-s145 = lib.nixosSystem {
@@ -75,6 +57,7 @@
         modules = [
           # Make the overlays available
           ({ config, pkgs, ... }: { nixpkgs.overlays = [ overlay-unstable overlay-stable ]; })
+          home-manager.nixosModules.home-manager # Allow home-manager as a NixOS module in flakes
           ./hosts/ideapad-s145/configuration.nix
         ];
       };

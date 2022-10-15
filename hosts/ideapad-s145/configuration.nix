@@ -13,8 +13,8 @@ in
 {
   imports =
   [
-    ./hardware-configuration.nix # Include the results of the hardware scan.
-    # <home-manager/nixos> # Home manager
+    ./hardware-configuration.nix  # Include the results of the hardware scan.
+    ./users/noah              # Enables user: noah
   ];
 
   fonts = {
@@ -25,23 +25,9 @@ in
     ];
   };
 
-  # Enable the bootloader.
   boot = {
-    # Setup keyfile
-    initrd = {
-      secrets = {
-        "/crypto_keyfile.bin" = null;
-      };
 
-      # Enable swap on luks
-      luks.devices = {
-        "luks-5013743b-7142-4c41-88ab-fe9abb872951" = {
-          device = "/dev/disk/by-uuid/5013743b-7142-4c41-88ab-fe9abb872951";
-          keyFile = "/crypto_keyfile.bin";
-        };
-      };
-    };
-
+    # Enable the bootloader.
     loader = {
 
       systemd-boot = {

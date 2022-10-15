@@ -42,7 +42,7 @@ in
       pkgs.bc
 
       # Programming languages
-      pkgs.unstable.go_1_19
+      pkgs.go_1_19
 
       # Programming/Text Editors
       pkgs.spacevim
@@ -63,7 +63,7 @@ in
       pkgs.gimp
 
       # TUI/CLI
-      pkgs.unstable.glances
+      pkgs.glances
       pkgs.gh
       pkgs.xclip
 
@@ -95,7 +95,7 @@ in
   # You can update Home Manager without changing this value. See
   # the Home Manager release notes for a list of state version
   # changes in each release.
-  # home.stateVersion = "22.05";
+  home.stateVersion = "22.05";
 
   # Let Home Manager install and manage itself.
   programs.home-manager.enable = true;
