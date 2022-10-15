@@ -302,7 +302,6 @@ in
     pkgs.gcc
     pkgs.glibc
     pkgs.python311
-    pkgs.cargo
 
     # LSP
     pkgs.rnix-lsp # Nix

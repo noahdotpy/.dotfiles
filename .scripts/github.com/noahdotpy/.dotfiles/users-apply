@@ -1,5 +1,0 @@
-#!/bin/sh
-pushd ~/.dotfiles
-echo "Applying user configurations..."
-home-manager switch --flake .
-popd
