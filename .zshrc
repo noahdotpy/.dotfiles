@@ -62,9 +62,7 @@ abbrev-alias sxhkdconf="$HOME/.config/sxhkd"
 abbrev-alias nixc="$HOME/.dotfiles/hosts/"
 
 abbrev-alias nixupd="$HOME/.scripts/github.com/noahdotpy/.dotfiles/nixos-update"
-abbrev-alias nixapply="$HOME/.scripts/github.com/noahdotpy/.dotfiles/users-apply && $HOME/.scripts/github.com/noahdotpy/.dotfiles/system-apply"
-abbrev-alias nixapplysys="$HOME/.scripts/github.com/noahdotpy/.dotfiles/system-apply"
-abbrev-alias nixapplyusrs="$HOME/.scripts/github.com/noahdotpy/.dotfiles/users-apply"
+abbrev-alias nixapply="$HOME/.scripts/github.com/noahdotpy/.dotfiles/nixos-apply"
 
 # NixOS Home Manager shortcuts
 abbrev-alias hman="home-manager"
