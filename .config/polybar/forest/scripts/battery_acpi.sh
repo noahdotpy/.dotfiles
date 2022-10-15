@@ -1,4 +1,4 @@
-#!/usr/bin/bash
+#!/usr/bin/env bash
 
 BATTERY_INFO="upower -i /org/freedesktop/UPower/devices/battery_BAT0"
 
