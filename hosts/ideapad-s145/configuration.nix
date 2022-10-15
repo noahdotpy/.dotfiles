@@ -302,6 +302,10 @@ in
     pkgs.gcc
     pkgs.glibc
     pkgs.python311
+    pkgs.cargo
+    pkgs.rustc
+    pkgs.clippy
+    pkgs.rustfmt
 
     # LSP
     pkgs.rnix-lsp # Nix
