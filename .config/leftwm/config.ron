@@ -186,22 +186,22 @@
         (
             command: IncreaseMainWidth, 
             value: "3", 
-            modifier: ["modkey", "Shift"], 
+            modifier: ["modkey", "Alt"], 
             key: "l"),
         (
             command: IncreaseMainWidth, 
             value: "3", 
-            modifier: ["modkey", "Shift"], 
+            modifier: ["modkey", "Alt"], 
             key: "Right"),
         (
             command: DecreaseMainWidth, 
             value: "3", 
-            modifier: ["modkey", "Shift"], 
+            modifier: ["modkey", "Alt"], 
             key: "h"),
         (
             command: DecreaseMainWidth, 
             value: "3", 
-            modifier: ["modkey", "Shift"], 
+            modifier: ["modkey", "Alt"], 
             key: "Left"),
         (
             command: FocusWorkspaceNext, 
