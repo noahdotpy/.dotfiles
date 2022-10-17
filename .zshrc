@@ -129,7 +129,8 @@ eval "$(starship init zsh)"
 ### MISCELLANEOUS ###
 #####################
 
-export PATH="/home/noah/.cargo/bin:$PATH"
+export PATH="$HOME/.cargo/bin:$PATH"
+export PATH="$HOME/go/bin:$PATH"
 export PATH="$HOME/.local/bin/:$PATH"
 
 #THIS MUST BE AT THE END OF THE FILE FOR SDKMAN TO WORK!!!
