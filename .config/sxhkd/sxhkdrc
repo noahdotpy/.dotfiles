@@ -51,7 +51,7 @@ super + alt + r
 
 # Open browser
 super + b
-	librewolf
+	firefox
 
 # Open editor
 super + e

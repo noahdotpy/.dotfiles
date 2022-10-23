@@ -1,3 +1,5 @@
+DISTRO_NAME=$(lsb_release -a | grep ID | awk '{print $3}')
+
 # declare a list of expandable aliases to fill up later
 typeset -a ealiases
 ealiases=()
@@ -89,6 +91,8 @@ abbrev-alias lg="lazygit"
 abbrev-alias ls="exa"
 abbrev-alias l="exa -ahl"
 
+
+abbrev-alias code="vscodium"
 abbrev-alias hx="helix"
 abbrev-alias nv="nvim"
 abbrev-alias lv="lvim"

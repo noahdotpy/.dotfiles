@@ -8,6 +8,10 @@
 dir="~/.config/polybar/forest/scripts/rofi"
 uptime=$(uptime -p | sed -e 's/up //g')
 
+if [[ $DESKTOP_SESSION == "" ]]; then
+	DESKTOP_SESSION=$(wmctrl -m | grep Name: | awk '{print $2}')
+fi
+
 # rofi_command="rofi -theme $dir/powermenu.rasi"
 rofi_command="rofi"
 
