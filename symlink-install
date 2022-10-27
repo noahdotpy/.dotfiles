@@ -22,6 +22,9 @@ then
 
     echo "Removing ~/.zshrc for replacement."
     rm -rf ~/.zshrc
+
+    echo "Removing ~/.zsh for replacement."
+    rm -rf ~/.zsh
 fi
 
 for FILE in .config/*
@@ -38,3 +41,6 @@ done
 
 echo "Making sym-link: $CURR_DIR/.zshrc -> ~/.zshrc"
 ln -s -f $CURR_DIR/.zshrc ~
+
+echo "Making sym-link: $CURR_DIR/.zsh -> ~/.zsh"
+ln -s -f $CURR_DIR/.zsh ~
