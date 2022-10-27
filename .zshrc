@@ -135,7 +135,8 @@ eval "$(starship init zsh)"
 
 [[ -s /etc/profile.d/autojump.zsh ]] && source /etc/profile.d/autojump.zsh
 
-source ~/.zsh/zsh-autosuggestions/zsh-autosuggestions.zsh
+source $HOME/.dotfiles/.zsh/github.com/zsh-users/zsh-autosuggestions/zsh-autosuggestions.zsh
+source $HOME/.zsh/github.com/zsh-users/zsh-syntax-highlighting/zsh-syntax-highlighting.zsh
 
 #####################
 ### MISCELLANEOUS ###
