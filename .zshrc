@@ -1,5 +1,22 @@
 DISTRO_NAME=$(lsb_release -a | grep ID | awk '{print $3}')
 
+function clone-my-plugins() {
+    plugin-clone github.com/zsh-users/zsh-syntax-highlighting
+    plugin-clone github.com/zsh-users/zsh-history-substring-search
+    plugin-clone github.com/zsh-users/zsh-autosuggestions
+}
+
+function plugin-clone() {
+    PLUGIN_URL="$1"
+    if [[ $PLUGIN_URL == "https://"* || $PLUGIN_URL == "http://"* ]]; then
+        PLUGIN_FOLDER="$HOME/.zsh/plugins/$(echo $PLUGIN_URL | awk -F "://" '{print $2}')"
+    else
+        PLUGIN_FOLDER="$HOME/.zsh/plugins/$PLUGIN_URL"
+        PLUGIN_URL="https://$PLUGIN_URL"
+    fi
+    git clone $PLUGIN_URL $PLUGIN_FOLDER
+}
+
 # declare a list of expandable aliases to fill up later
 typeset -a ealiases
 ealiases=()
@@ -135,9 +152,9 @@ eval "$(starship init zsh)"
 
 [[ -s /etc/profile.d/autojump.zsh ]] && source /etc/profile.d/autojump.zsh
 
-source $HOME/.zsh/github.com/zsh-users/zsh-autosuggestions/zsh-autosuggestions.zsh
-source $HOME/.zsh/github.com/zsh-users/zsh-syntax-highlighting/zsh-syntax-highlighting.zsh
-source $HOME/.zsh/github.com/zsh-users/zsh-history-substring-search/zsh-history-substring-search.zsh
+source $HOME/.zsh/plugins/github.com/zsh-users/zsh-autosuggestions/zsh-autosuggestions.zsh
+source $HOME/.zsh/plugins/github.com/zsh-users/zsh-syntax-highlighting/zsh-syntax-highlighting.zsh
+source $HOME/.zsh/plugins/github.com/zsh-users/zsh-history-substring-search/zsh-history-substring-search.zsh
 
 #####################
 ### MISCELLANEOUS ###
