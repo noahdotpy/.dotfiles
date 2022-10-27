@@ -137,6 +137,8 @@ export PATH="$HOME/.cargo/bin:$PATH"
 export PATH="$HOME/go/bin:$PATH"
 export PATH="$HOME/.local/bin/:$PATH"
 
+[[ -s /etc/profile.d/autojump.sh ]] && source /etc/profile.d/autojump.sh
+
 #THIS MUST BE AT THE END OF THE FILE FOR SDKMAN TO WORK!!!
 export SDKMAN_DIR="$HOME/.sdkman"
 [[ -s "$HOME/.sdkman/bin/sdkman-init.sh" ]] && source "$HOME/.sdkman/bin/sdkman-init.sh"
