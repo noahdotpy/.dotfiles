@@ -55,7 +55,7 @@ zle -N accept-line expand-alias-and-accept-line
 # SET ENVIRONMENTAL VARIABLES
 export EDITOR="helix"
 export TERMINAL="kitty"
-export BROWSER="librewolf"
+export BROWSER="firefox"
 
 #############################
 ### ABBREVIATIONS/ALIASES ###

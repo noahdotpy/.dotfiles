@@ -96,7 +96,7 @@
             key: "r"),
         (
             command: Execute, 
-            value: "~/.config/leftwm/themes/current/lock-screen.sh", 
+            value: "~/.config/leftwm/themes/current/scripts/lock-screen.sh", 
             modifier: ["modkey", "Shift", "Control"], 
             key: "l"),
         (

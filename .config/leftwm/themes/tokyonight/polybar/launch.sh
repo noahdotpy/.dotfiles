@@ -1,5 +1,6 @@
 #!/usr/bin/env bash
-dir="$HOME/.dotfiles/.config/leftwm/themes/tokyonight/polybar/forest/config.ini"
+
+dir="$HOME/.config/polybar"
 themes=(`ls --hide="launch.sh" $dir`)
 
 launch_bar() {
@@ -10,7 +11,7 @@ launch_bar() {
 	while pgrep -u $UID -x polybar >/dev/null; do sleep 1; done
 
 	# Launch the bar
-    polybar -q main -c "$dir" &	
+    polybar -q main -c "$dir/forest/config.ini" &	
 }
 
 launch_bar
