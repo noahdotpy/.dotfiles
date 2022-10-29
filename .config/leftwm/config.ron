@@ -181,7 +181,7 @@
         (
             command: PreviousLayout, 
             value: "", 
-            odifier: ["modkey", "Control"], 
+            modifier: ["modkey", "Control"], 
             key: "j"),
         (
             command: IncreaseMainWidth, 
