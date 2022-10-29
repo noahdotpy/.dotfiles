@@ -118,6 +118,11 @@ abbrev-alias ls="exa"
 abbrev-alias l="exa -ahl"
 
 abbrev-alias code="vscodium"
+if [[ "$DISTRO_NAME" == "openSUSE" ]]; then
+    abbrev-alias code="codium"
+else
+    abbrev-alias code="vscodium"
+fi
 abbrev-alias hx="helix"
 abbrev-alias nv="nvim"
 abbrev-alias lv="lvim"
