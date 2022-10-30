@@ -78,14 +78,14 @@ abbrev-alias qtileconf="$HOME/.config/qtile"
 abbrev-alias sxhkdconf="$HOME/.config/sxhkd"
 
 # NixOS shortcuts
-abbrev-alias nixc="$HOME/.dotfiles/hosts/"
+abbrev-alias nixc="$HOME/.dotfiles/nix/"
 
 abbrev-alias nixupd="$HOME/.scripts/github.com/noahdotpy/.dotfiles/nixos-update"
 abbrev-alias nixapply="$HOME/.scripts/github.com/noahdotpy/.dotfiles/nixos-apply"
 
 # NixOS Home Manager shortcuts
 abbrev-alias hman="home-manager"
-abbrev-alias hmanc="$HOME/.dotfiles/users/noah"
+abbrev-alias hmanc="$HOME/.dotfiles/nix/ideapad-s145/users/noah"
 
 # Program shortcuts
 abbrev-alias e="$EDITOR"

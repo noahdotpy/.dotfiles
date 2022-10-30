@@ -1,5 +1,5 @@
 #!/bin/sh
-pushd ~/.dotfiles
+pushd ~/.dotfiles/nix/
 echo "Applying system configuration..."
 sudo nixos-rebuild switch --flake .#
 popd

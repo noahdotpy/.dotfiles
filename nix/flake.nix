@@ -58,7 +58,7 @@
           # Make the overlays available
           ({ config, pkgs, ... }: { nixpkgs.overlays = [ overlay-unstable overlay-stable ]; })
           home-manager.nixosModules.home-manager # Allow home-manager as a NixOS module in flakes
-          ./hosts/ideapad-s145/configuration.nix
+          ./ideapad-s145/configuration.nix
         ];
       };
     };
