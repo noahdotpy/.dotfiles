@@ -1,6 +1,20 @@
 read -r DISTRO_NAME < /etc/os-release
 DISTRO_NAME=$(echo "$DISTRO_NAME" | awk -F '=' '{print $2}' | sed 's/"//g')
 
+# True iff all arguments are executable in $PATH
+function is_bin_in_path {
+  if [[ -n $ZSH_VERSION ]]; then
+    builtin whence -p "$1" &> /dev/null
+  else  # bash:
+    builtin type -P "$1" &> /dev/null
+  fi
+  [[ $? -ne 0 ]] && return 1
+  if [[ $# -gt 1 ]]; then
+    shift  # We've just checked the first one
+    is_bin_in_path "$@"
+  fi
+}
+
 function clone-my-plugins() {
     plugin-clone github.com/zsh-users/zsh-syntax-highlighting
     plugin-clone github.com/zsh-users/zsh-history-substring-search
@@ -119,12 +133,12 @@ abbrev-alias ls="exa"
 abbrev-alias l="exa -ahl"
 
 abbrev-alias code="vscodium"
-if [[ "$DISTRO_NAME" == "openSUSE" ]]; then
-    abbrev-alias code="codium"
-else
-    abbrev-alias code="vscodium"
+if [ -x is_bin_in_path "vscodium" ];   then abbrev-alias code="vscodium"
+else [ -x is_bin_in_path "codium" ];     then abbrev-alias code="codium"
 fi
-abbrev-alias hx="helix"
+
+if [ -x is_bin_in_path "helix" ]; then abbrev-alias hx="helix"
+fi
 abbrev-alias nv="nvim"
 abbrev-alias lv="lvim"
 abbrev-alias sv="spacevim"
@@ -177,9 +191,9 @@ source $HOME/.zsh/plugins/github.com/zsh-users/zsh-history-substring-search/zsh-
 export PATH="$HOME/.cargo/bin:$PATH"
 export PATH="$HOME/go/bin:$PATH"
 export PATH="$HOME/.local/bin/:$PATH"
+export PATH="$HOME/.local/bin/distrobox-exported/:$PATH"
 
 #THIS MUST BE AT THE END OF THE FILE FOR SDKMAN TO WORK!!!
 export SDKMAN_DIR="$HOME/.sdkman"
 [[ -s "$HOME/.sdkman/bin/sdkman-init.sh" ]] && source "$HOME/.sdkman/bin/sdkman-init.sh"
 
-if [ -e /home/noah/.nix-profile/etc/profile.d/nix.sh ]; then . /home/noah/.nix-profile/etc/profile.d/nix.sh; fi # added by Nix installer
