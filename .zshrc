@@ -68,7 +68,7 @@ zle -N accept-line expand-alias-and-accept-line
 
 
 # SET ENVIRONMENTAL VARIABLES
-export EDITOR="helix"
+export EDITOR="hx"
 export TERMINAL="kitty"
 export BROWSER="firefox"
 
@@ -133,12 +133,7 @@ abbrev-alias ls="exa"
 abbrev-alias l="exa -ahl"
 
 abbrev-alias code="vscodium"
-if [ -x is_bin_in_path "vscodium" ];   then abbrev-alias code="vscodium"
-else [ -x is_bin_in_path "codium" ];     then abbrev-alias code="codium"
-fi
 
-if [ -x is_bin_in_path "helix" ]; then abbrev-alias hx="helix"
-fi
 abbrev-alias nv="nvim"
 abbrev-alias lv="lvim"
 abbrev-alias sv="spacevim"
