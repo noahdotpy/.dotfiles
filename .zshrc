@@ -120,15 +120,6 @@ abbrev-alias x="clear"
 abbrev-alias gs="git status"
 abbrev-alias lg="lazygit"
 
-if [[ "$DISTRO_NAME" == "openSUSE" || "$DISTRO_NAME" == "Fedora Linux" ]]; then
-    function autojump-fixed() {
-        DIR_TO_JUMP=$(autojump $1); echo "Jumping to: $DIR_TO_JUMP" && cd $DIR_TO_JUMP
-    }
-    abbrev-alias j="autojump-fixed"
-else
-    abbrev-alias j="autojump"
-fi
-
 abbrev-alias ls="exa"
 abbrev-alias l="exa -ahl"
 
