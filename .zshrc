@@ -66,6 +66,7 @@ expand-alias-and-accept-line() {
 }
 zle -N accept-line expand-alias-and-accept-line
 
+setopt auto_cd
 
 # SET ENVIRONMENTAL VARIABLES
 export EDITOR="hx"
