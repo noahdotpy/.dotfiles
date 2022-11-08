@@ -65,7 +65,7 @@ bindsym $mod+Ctrl+t exec ~/.scripts/github.com/noahdotpy/.dotfiles/toggle_touchp
 
 # Keybinds for opening apps
 # Open a terminal
-bindsym $mod+t exec "urxvt"
+bindsym $mod+Return exec "kitty"
 # open default web browser
 bindsym $mod+b exec "firefox"
 # open emacs (client connected to daemon)
