@@ -11,6 +11,3 @@ while pgrep -u $UID -x dunst >/dev/null; do sleep 1; done
 # Launch dunst
 dunst -c "$HOME/.config/dunst/dunstrc" &
 
-notify-send "Low" --urgency low
-notify-send "Normal" --urgency normal
-notify-send "Critical" --urgency critical

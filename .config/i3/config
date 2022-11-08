@@ -65,13 +65,13 @@ bindsym $mod+Ctrl+t exec ~/.scripts/github.com/noahdotpy/.dotfiles/toggle_touchp
 
 # Keybinds for opening apps
 # Open a terminal
-bindsym $mod+t exec kitty
+bindsym $mod+t exec "urxvt"
 # open default web browser
-bindsym $mod+b exec "librewolf"
+bindsym $mod+b exec "firefox"
 # open emacs (client connected to daemon)
 # bindsym $mod+e exec "emacsclient -c -a 'emacs'"
 bindsym $mod+e exec "kitty $EDITOR"
-# open default file browser
+# open default file firefox
 bindsym $mod+f exec "nautilus"
 # open system monitor (htop)
 bindsym $mod+Escape exec "kitty -e htop"
@@ -171,9 +171,9 @@ bindsym $mod+Shift+9 move container to workspace number $ws9
 bindsym $mod+Shift+0 move container to workspace number $ws10
 
 # reload the configuration file
-bindsym $mod+Shift+r reload
+bindsym $mod+Shift+Ctrl+r reload
 # restart i3 inplace (preserves your layout/session, can be used to upgrade i3)
-bindsym $mod+Shift+Ctrl+r restart
+bindsym $mod+Shift+r restart
 # exit i3 (logs you out of your X session)
 # bindsym $mod+Shift+e exec "i3-nagbar -t warning -m 'You pressed the exit shortcut. Do you really want to exit i3? This will end your X session.' -B 'Yes, exit i3' 'i3-msg exit'"
 # using plasma's logout screen instead of i3's
@@ -230,6 +230,10 @@ client.unfocused         #16161d #16161d #c0caf5 #16161d   #16161d
 gaps inner 6
 gaps outer -2
 
+bar {
+        status_command SCRIPT_DIR=~/.config/i3blocks/scripts i3blocks
+}
+
 # border/titlebar config
 default_border pixel 2
 default_floating_border pixel 2
@@ -243,12 +247,8 @@ hide_edge_borders both
 # start picom
 # exec picom -b
 
-# start polybar
-exec_always --no-startup-id "$HOME/.config/polybar/launch.sh --forest"
-
-# restore nitrogen wallpaper
-exec_always nitrogen --restore
-
+# restore feh wallpaper
+exec_always ~/.fehbg
 
 #####################
 # => Peripherals: ###

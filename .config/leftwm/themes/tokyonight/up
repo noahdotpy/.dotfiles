@@ -50,7 +50,7 @@ fi
 
 # 1) START - set random wallpapers -----------------------------------------+
 if [ -x "$(command -v feh)" ]; then
-  feh --randomize --bg-fill "$SCRIPTPATH"/wallpapers/*
+  feh --randomize --bg-fill "$SCRIPTPATH"/wallpapers/* --no-fehbg
 fi
 # END ----------------------------------------------------------------------+
 
