@@ -37,7 +37,7 @@ typeset -a ealiases
 ealiases=()
 
 # write a function for adding an alias to the list mentioned above
-function abbrev-alias() {
+function abbrev() {
     alias $1
     export $1
     ealiases+=(${1%%\=*})
@@ -45,7 +45,7 @@ function abbrev-alias() {
 
 # expand any aliases in the current line buffer
 function expand-ealias() {
-    if [[ $LBUFFER =~ "\<(${(j:|:)ealiases})\$" ]]; then
+    if [[ $LBUFFER =~ "\<(${(j:|:)ealiases})\$" ]] && [[ "$LBUFFER" != "\\"* ]]; then
         zle _expand_alias
         zle expand-word
     fi
@@ -55,7 +55,6 @@ zle -N expand-ealias
 
 # Bind the space key to the expand-alias function above, so that space will expand any expandable aliases
 bindkey ' '        expand-ealias
-bindkey '^ '       magic-space     # control-space to bypass completion
 bindkey -M isearch " "      magic-space     # normal space during searches
 
 # A function for expanding any aliases before accepting the line as is and executing the entered command
@@ -78,38 +77,38 @@ export BROWSER="firefox"
 #############################
 
 # NixOS shortcuts
-abbrev-alias nixc="$HOME/.dotfiles/nix/"
+abbrev nixc="$HOME/.dotfiles/nix/"
 
-abbrev-alias nixupd="$HOME/.scripts/github.com/noahdotpy/.dotfiles/nixos-update"
-abbrev-alias nixapply="$HOME/.scripts/github.com/noahdotpy/.dotfiles/nixos-apply"
+abbrev nixupd="$HOME/.scripts/github.com/noahdotpy/.dotfiles/nixos-update"
+abbrev nixapply="$HOME/.scripts/github.com/noahdotpy/.dotfiles/nixos-apply"
 
 # NixOS Home Manager shortcuts
-abbrev-alias hman="home-manager"
-abbrev-alias hmanc="$HOME/.dotfiles/nix/ideapad-s145/users/noah"
+abbrev hman="home-manager"
+abbrev hmanc="$HOME/.dotfiles/nix/ideapad-s145/users/noah"
 
 # Program shortcuts
 
 function je() {
   j $1 && $EDITOR .  
 }
-abbrev-alias e="$EDITOR"
+abbrev e="$EDITOR"
 
-abbrev-alias x="clear"
+abbrev x="clear"
 
-abbrev-alias gs="git status"
-abbrev-alias lg="lazygit"
+abbrev gs="git status"
+abbrev lg="lazygit"
 
-abbrev-alias ls="exa"
-abbrev-alias l="exa -ahl"
+abbrev ls="exa"
+abbrev l="exa -ahl"
 
-abbrev-alias code="codium"
+abbrev code="codium"
 
-abbrev-alias nv="nvim"
-abbrev-alias lv="lvim"
-abbrev-alias sv="spacevim"
-abbrev-alias svim="spacevim"
-abbrev-alias emacsc="emacsclient -c -a 'emacs'"
-abbrev-alias py="python3"
+abbrev nv="nvim"
+abbrev lv="lvim"
+abbrev sv="spacevim"
+abbrev svim="spacevim"
+abbrev emacsc="emacsclient -c -a 'emacs'"
+abbrev py="python3"
 
 ##########################
 ### AUTOSTART PROGRAMS ###
