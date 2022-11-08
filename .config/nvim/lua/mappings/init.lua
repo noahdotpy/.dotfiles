@@ -51,17 +51,17 @@ vim.keymap.set('n', '<leader>e', '<CMD>NvimTreeToggle<CR>', { silent = true })
 -- TELESCOPE KEYBINDS
 -- See `:help telescope.builtin`
 
-vim.keymap.set('n', '<leader>/', function()
-    require('telescope.builtin').current_buffer_fuzzy_find(require('telescope.themes').get_dropdown {
-    winblend = 10,
-    previewer = false,
-  })
-end, { desc = '[<space>/] Fuzzily search in current buffer]' })
 vim.keymap.set('n', '<leader>fr',       require('telescope.builtin').oldfiles,                      { desc = '[<space>fr] Find recently opened files' })
 vim.keymap.set('n', '<leader>fb',       require('telescope.builtin').buffers,                       { desc = '[<space>fb] Find existing buffers' })
 vim.keymap.set('n', '<leader>ff',       require('telescope.builtin').find_files,                    { desc = '[<space>ff] Find files' })
 
-vim.keymap.set('n', '<leader>st',       require('telescope.builtin').treesitter,                    { desc = '[<space>st] Sourch through treesitter symbols' })
+vim.keymap.set('n', '<leader>sb', function()
+    require('telescope.builtin').current_buffer_fuzzy_find(require('telescope.themes').get_dropdown {
+    winblend = 10,
+    previewer = false,
+  })
+end, { desc = '[<space>sb] Search in current buffer]' })
+vim.keymap.set('n', '<leader>st',       require('telescope.builtin').treesitter,                    { desc = '[<space>st] Search through treesitter symbols' })
 vim.keymap.set('n', '<leader>sh',       require('telescope.builtin').help_tags,                     { desc = '[<space>sh] Search help' })
 vim.keymap.set('n', '<leader>sw',       require('telescope.builtin').grep_string,                   { desc = '[<space>sw] Search current word' })
 vim.keymap.set('n', '<leader>sg',       require('telescope.builtin').live_grep,                     { desc = '[<space>sg] Search by grep' })
