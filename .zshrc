@@ -69,29 +69,13 @@ zle -N accept-line expand-alias-and-accept-line
 setopt auto_cd
 
 # SET ENVIRONMENTAL VARIABLES
-export EDITOR="hx"
+export EDITOR="nvim"
 export TERMINAL="kitty"
 export BROWSER="firefox"
 
 #############################
 ### ABBREVIATIONS/ALIASES ###
 #############################
-
-# Config shortcuts
-abbrev-alias conf="$HOME/config"
-abbrev-alias dots="$HOME/.dotfiles"
-abbrev-alias zshrc="$HOME/.zshrc"
-abbrev-alias alconf="$HOME/.config/alacritty/"
-abbrev-alias dunstconf="$HOME/.config/dunst"
-abbrev-alias fishconf="$HOME/.config/fish"
-abbrev-alias swayconf="$HOME/.config/sway"
-abbrev-alias roficonf="$HOME/.config/rofi"
-abbrev-alias i3conf="$HOME/.config/i3"
-abbrev-alias nvconf="$HOME/.config/nvim"
-abbrev-alias pbconf="$HOME/.config/polybar"
-abbrev-alias bspwmconf="$HOME/.config/bspwm"
-abbrev-alias qtileconf="$HOME/.config/qtile"
-abbrev-alias sxhkdconf="$HOME/.config/sxhkd"
 
 # NixOS shortcuts
 abbrev-alias nixc="$HOME/.dotfiles/nix/"
@@ -104,17 +88,11 @@ abbrev-alias hman="home-manager"
 abbrev-alias hmanc="$HOME/.dotfiles/nix/ideapad-s145/users/noah"
 
 # Program shortcuts
+
+function je() {
+  j $1 && $EDITOR .  
+}
 abbrev-alias e="$EDITOR"
-
-abbrev-alias enablecam="sudo modprobe uvcvideo"
-abbrev-alias enablecamera="sudo modprobe uvcvideo"
-
-abbrev-alias disablecamforce="sudo rmmod -f uvcvideo"
-abbrev-alias disablecameraforce="sudo rmmod -f uvcvideo"
-abbrev-alias disablecamforced="sudo rmmod -f uvcvideo"
-abbrev-alias disablecameraforced="sudo rmmod -f uvcvideo"
-abbrev-alias disablecam="sudo modprobe -r uvcvideo"
-abbrev-alias disablecamera="sudo modprobe -r uvcvideo"
 
 abbrev-alias x="clear"
 
@@ -124,7 +102,7 @@ abbrev-alias lg="lazygit"
 abbrev-alias ls="exa"
 abbrev-alias l="exa -ahl"
 
-abbrev-alias code="vscodium"
+abbrev-alias code="codium"
 
 abbrev-alias nv="nvim"
 abbrev-alias lv="lvim"
@@ -132,26 +110,6 @@ abbrev-alias sv="spacevim"
 abbrev-alias svim="spacevim"
 abbrev-alias emacsc="emacsclient -c -a 'emacs'"
 abbrev-alias py="python3"
-
-# Filesystem shortcuts
-abbrev-alias gosrc="$HOME/go/src"
-abbrev-alias cproj="$HOME/CodeProjects"
-abbrev-alias cprojpy="$HOME/CodeProjects/Python"
-abbrev-alias ideaproj="$HOME/IdeaProjects"
-abbrev-alias pyproj="$HOME/PycharmProjects"
-
-abbrev-alias dl="$HOME/Downloads"
-abbrev-alias dls="$HOME/Downloads"
-abbrev-alias downloads="$HOME/Downloads"
-abbrev-alias docs="$HOME/Documents"
-abbrev-alias documents="$HOME/Documents"
-abbrev-alias pics="$HOME/Pictures"
-abbrev-alias pictures="$HOME/Pictures"
-abbrev-alias walls="$HOME/Pictures/Wallpapers"
-abbrev-alias wallpapers="$HOME/Pictures/Wallpapers"
-abbrev-alias vids="$HOME/Videos"
-abbrev-alias videos="$HOME/Videos"
-
 
 ##########################
 ### AUTOSTART PROGRAMS ###
