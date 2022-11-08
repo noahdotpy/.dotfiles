@@ -31,6 +31,9 @@ vim.o.incsearch = true
 -- Start scrolling at N amount of lines from top or bottom of current view
 vim.o.scrolloff = 5
 
+-- Timeout when opening something like which-key
+vim.o.timeoutlen = 0
+
 -- Disable auto-comment when adding newline coming from commented line
 vim.cmd [[autocmd FileType * set formatoptions-=cro]]
 
