@@ -114,18 +114,26 @@ abbrev py="python3"
 ### AUTOSTART PROGRAMS ###
 ##########################
 
-pfetch
-
-eval "$(starship init zsh)"
 
 ###############
 ### PLUGINS ###
 ###############
 
-[[ -s /etc/profile.d/autojump.zsh ]] && source /etc/profile.d/autojump.zsh
+# like neofetch but smaller (startup and literal lines it outputs)
+pfetch
 
+# allows something like `j .dot` to go to `~/.dotfiles`
+[[ -s /etc/profile.d/autojump.zsh ]] && source /etc/profile.d/autojump.zsh
+# better command history management (cargo install atuin)
+eval "$(atuin init zsh)"
+# better prompt (cargo install starship)
+eval "$(starship init zsh)"
+
+# autocomplete (like from fish)
 source $HOME/.zsh/plugins/github.com/zsh-users/zsh-autosuggestions/zsh-autosuggestions.zsh
+# syntax highlighting
 source $HOME/.zsh/plugins/github.com/zsh-users/zsh-syntax-highlighting/zsh-syntax-highlighting.zsh
+# example: type `git clone https:` and then when you type arrow it will show all history with `git clone https:` at the start
 source $HOME/.zsh/plugins/github.com/zsh-users/zsh-history-substring-search/zsh-history-substring-search.zsh
 
 #####################
@@ -137,7 +145,9 @@ export PATH="$HOME/go/bin:$PATH"
 export PATH="$HOME/.local/bin/:$PATH"
 export PATH="$HOME/.local/bin/distrobox-exported/:$PATH"
 
+# load Angular CLI autocompletion only if available
+[[ -s "/usr/local/bin/ng" ]] && source <(ng completion script)
+
 #THIS MUST BE AT THE END OF THE FILE FOR SDKMAN TO WORK!!!
 export SDKMAN_DIR="$HOME/.sdkman"
 [[ -s "$HOME/.sdkman/bin/sdkman-init.sh" ]] && source "$HOME/.sdkman/bin/sdkman-init.sh"
-
