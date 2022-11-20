@@ -54,6 +54,37 @@ require('packer').startup(function(use)
   
   -- Fuzzy Finder Algorithm which requires local dependencies to be built. Only load if `make` is available
   use { 'nvim-telescope/telescope-fzf-native.nvim', run = 'make', cond = vim.fn.executable "make" == 1 }
+
+  -- Typescrript syntax support
+  use 'leafgarland/typescript-vim'
+
+  -- Template strings syntax support
+  use 'Quramy/vim-js-pretty-template'
+
+  -- Javascript syntax highlighting
+  use 'pangloss/vim-javascript'
+
+  -- Async execution library for Vim
+  use 'Shougo/vimproc.vim'
+
+  -- TS features plugin
+  use 'Quramy/tsuquyomi'
+
+  -- Automatic completion suggestions
+  use 'Valloric/YouCompleteMe'
+
+  -- .editorconfig support
+  use 'editorconfig/editorconfig-vim'
+
+  -- Syntastic plugin
+  use 'vim-syntastic/syntastic'
+
+  -- Auto pairs plugin
+  use 'jiangmiao/auto-pairs'
+
+  --Angular CLI plugin
+  -- Use :Ng command in Vim
+  use 'bdauria/angular-cli.vim'
   
   if is_bootstrap then
     require('packer').sync()

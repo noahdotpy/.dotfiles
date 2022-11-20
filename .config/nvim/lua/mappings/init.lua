@@ -21,9 +21,9 @@ vim.keymap.set({ 'n', 'v' }, '<Space>', '<Nop>', { silent = true })
 -- vim.keymap.set({ 'n', 'v' }, '<Left>', '<Nop>', { silent = true })
 -- vim.keymap.set({ 'n', 'v' }, '<Right>', '<Nop>', { silent = true })
 
-------------------------
+-----------------------------
 --- => FILE NAVIGATION <= ---
-------------------------
+-----------------------------
 
 -- requires plugin github:phaazon/hop.nvim
 vim.api.nvim_set_keymap('', 'f', "<cmd>lua require'hop'.hint_char1({ direction = require'hop.hint'.HintDirection.AFTER_CURSOR, current_line_only = true })<cr>", {})
@@ -46,14 +46,18 @@ vim.keymap.set({'n', 'v'}, '<leader>p', '"+p', { silent = true, desc = '[Leader+
 --- => UI TOGGLES <= ---
 ------------------------
 
-vim.keymap.set('n', '<leader>e', '<CMD>NvimTreeToggle<CR>', { silent = true })
-
 -- TELESCOPE KEYBINDS
 -- See `:help telescope.builtin`
 
 vim.keymap.set('n', '<leader>fr',       require('telescope.builtin').oldfiles,                      { desc = '[<space>fr] Find recently opened files' })
-vim.keymap.set('n', '<leader>fb',       require('telescope.builtin').buffers,                       { desc = '[<space>fb] Find existing buffers' })
+vim.keymap.set('n', '<leader>fb',       require('telescope').extensions.file_browser.file_browser,  { desc = '[<space>fb] File browser' })
 vim.keymap.set('n', '<leader>ff',       require('telescope.builtin').find_files,                    { desc = '[<space>ff] Find files' })
+
+vim.keymap.set('n', '<leader>gff', require('telescope.builtin').git_files, { desc = '[<space>gff] Git: Find tracked file' })
+
+vim.keymap.set('n', '<leader>bf',       require('telescope.builtin').buffers,                       { desc = '[<space>bf] Search existing buffers' })
+vim.keymap.set('n', '<leader>btn',       '<CMD>bnext<cr>',                                          { desc = '[<space>btn] To next buffer' })
+vim.keymap.set('n', '<leader>btp',       '<CMD>bprevious<cr>',                                      { desc = '[<space>btp] To previous buffer' })
 
 vim.keymap.set('n', '<leader>sb', function()
     require('telescope.builtin').current_buffer_fuzzy_find(require('telescope.themes').get_dropdown {
