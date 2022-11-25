@@ -86,6 +86,14 @@ abbrev nixapply="$HOME/.scripts/github.com/noahdotpy/.dotfiles/nixos-apply"
 abbrev hman="home-manager"
 abbrev hmanc="$HOME/.dotfiles/nix/ideapad-s145/users/noah"
 
+# Container shortcuts
+function "-"() {
+  NAME="$1"
+  # Get all sequential args after $1 to pass to distrobox-enter
+  ARGS=$(echo $@ | awk '{for (i=2; i<NF; i++) printf $i " "; if (NF >= 2) print $NF; }')
+  distrobox-enter $NAME -- "$ARGS"
+}
+
 # Program shortcuts
 
 function je() {
@@ -144,6 +152,7 @@ export PATH="$HOME/.cargo/bin:$PATH"
 export PATH="$HOME/go/bin:$PATH"
 export PATH="$HOME/.local/bin/:$PATH"
 export PATH="$HOME/.local/bin/distrobox-exported/:$PATH"
+export PATH="$HOME/.local/share/flatpak/exports/bin:$PATH" # allow something like `org.gimp.GIMP`
 
 # load Angular CLI autocompletion only if available
 [[ -s "/usr/local/bin/ng" ]] && source <(ng completion script)
