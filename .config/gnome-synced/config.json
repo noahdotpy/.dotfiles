@@ -1,0 +1,73 @@
+{
+    "extensions": {
+        "blur-my-shell@aunetx": {
+            "/org/gnome/shell/extensions/blur-my-shell/": "[panel]\nblur=false\noverride-background=true\noverride-background-dynamically=false\nstatic-blur=true\nstyle-panel=2",
+            "/org/gnome/shell/extensions/blur-my-shell/overview/": "",
+            "/org/gnome/shell/extensions/blur-my-shell/appfolder/": "",
+            "/org/gnome/shell/extensions/blur-my-shell/panel/": "[/]\nblur=false\noverride-background=true\noverride-background-dynamically=false\nstatic-blur=true\nstyle-panel=2",
+            "/org/gnome/shell/extensions/blur-my-shell/dash-to-dock/": "",
+            "/org/gnome/shell/extensions/blur-my-shell/applications/": "",
+            "/org/gnome/shell/extensions/blur-my-shell/screenshot/": "",
+            "/org/gnome/shell/extensions/blur-my-shell/lockscreen/": "",
+            "/org/gnome/shell/extensions/blur-my-shell/window-list/": "",
+            "/org/gnome/shell/extensions/blur-my-shell/hidetopbar/": ""
+        },
+        "user-theme@gnome-shell-extensions.gcampax.github.com": {
+            "/org/gnome/shell/extensions/user-theme/": "[/]\nname=''"
+        },
+        "gsconnect@andyholmes.github.io": {
+            "/org/gnome/shell/extensions/gsconnect/": "[/]\nid='e4d37626-baa2-47ad-b722-c39115a556ff'\nname='ideapad-s145'"
+        },
+        "drive-menu@gnome-shell-extensions.gcampax.github.com": {},
+        "appindicatorsupport@rgcjonas.gmail.com": {
+            "/org/gnome/shell/extensions/appindicator/": ""
+        },
+        "just-perfection-desktop@just-perfection": {
+            "/org/gnome/shell/extensions/just-perfection/": "[/]\nanimation=3\nnotification-banner-position=2\nwindow-demands-attention-focus=true\nworkspace=true\nworkspace-switcher-should-show=true\nworkspace-wrap-around=true"
+        },
+        "batterytime@typeof.pw": {},
+        "custom-hot-corners-extended@G-dH.github.com": {
+            "/org/gnome/shell/extensions/custom-hot-corners-extended/": "[misc]\nshow-osd-monitor-indexes=false\nsupported-active-extensions=['ArcMenu']",
+            "/org/gnome/shell/extensions/custom-hot-corners-extended/misc/": "[/]\nshow-osd-monitor-indexes=false\nsupported-active-extensions=['ArcMenu']"
+        },
+        "lockkeys@vaina.lt": {
+            "/org/gnome/shell/extensions/lockkeys/": "[/]\nnotification-preferences='osd'\nstyle='show-hide'"
+        },
+        "dash-to-dock@micxgx.gmail.com": {
+            "/org/gnome/shell/extensions/dash-to-dock/": "[/]\nanimate-show-apps=true\napply-custom-theme=false\nbackground-color='rgb(24,24,37)'\nbackground-opacity=0.88\ncustom-background-color=true\ndash-max-icon-size=24\ndock-position='BOTTOM'\nextend-height=false\nheight-fraction=0.40000000000000002\nhot-keys=false\nicon-size-fixed=false\nisolate-monitors=true\nisolate-workspaces=true\npreferred-monitor=-2\npreferred-monitor-by-connector='eDP-1'\nshow-favorites=true\nshow-mounts=false\nshow-mounts-only-mounted=false\nshow-trash=false\ntransparency-mode='DEFAULT'"
+        },
+        "AlphabeticalAppGrid@stuarthayhurst": {
+            "/org/gnome/shell/extensions/alphabetical-app-grid/": "[/]\nfolder-order-position='alphabetical'"
+        },
+        "simply.workspaces@andyrichardson.dev": {},
+        "disable-workspace-switcher@jbradaric.me": {},
+        "arcmenu@arcmenu.com": {
+            "/org/gnome/shell/extensions/arcmenu/": "[/]\ndash-to-panel-standalone=false\nenable-standlone-runner-menu=true\nmenu-background-color='rgba(48,48,49,0.98)'\nmenu-border-color='rgb(60,60,60)'\nmenu-button-appearance='Icon'\nmenu-foreground-color='rgb(223,223,223)'\nmenu-item-active-bg-color='rgb(25,98,163)'\nmenu-item-active-fg-color='rgb(255,255,255)'\nmenu-item-hover-bg-color='rgb(21,83,158)'\nmenu-item-hover-fg-color='rgb(255,255,255)'\nmenu-separator-color='rgba(255,255,255,0.1)'\noverride-menu-theme=false\npinned-app-list=['Firefox', '', 'org.mozilla.firefox.desktop', 'Files', '', 'org.gnome.Nautilus.desktop', 'Terminal', '', 'org.gnome.Terminal.desktop', 'ArcMenu Settings', 'ArcMenu_ArcMenuIcon', 'gnome-extensions prefs arcmenu@arcmenu.com']\nprefs-visible-page=0\nrecently-installed-apps=['appimagekit_553b39b190ed87f6a6a07fd64daa58c2-Hyper.desktop', 'aip_appimagepool-5.0.0-x86_64_fd4cc9ce4dd8e3a99594d0368307bb67_fd4cc9ce4dd8e3a99594d0368307bb67.desktop', 'aip_Hyper-3.4.0-canary.1_2f64fa2c74b67d59fd24c650e24472e8.desktop', 'appimagekit_797b8f9e6869d4c89660587a89b1e943-Hyper.desktop', 'appimagekit_903cab13ae1ea235de05b54c9000df2c-AppImage_Pool.desktop']\nrunner-menu-custom-hotkey=['<Super>a']\nrunner-show-frequent-apps=true\nshow-activities-button=true"
+        },
+        "bluetooth-quick-connect@bjarosze.gmail.com": {
+            "/org/gnome/shell/extensions/bluetooth-quick-connect/": ""
+        },
+        "ssm-gnome@lgiki.net": {
+            "/org/gnome/shell/extensions/simple-system-monitor/": "[/]\ncpu-usage-text='CPU'\ndownload-speed-text='↓'\nextension-order=0\nextension-position='right'\nfont-weight=500\nis-cpu-usage-enable=true\nis-download-speed-enable=false\nis-memory-usage-enable=true\nis-upload-speed-enable=false\nitem-separator=' '\nmemory-usage-text='MEM'\nrefresh-interval=1\nshow-extra-spaces=true\nshow-percent-sign=true\nupload-speed-text='↑'"
+        }
+    },
+    "keybindings": {
+        "/org/gnome/mutter/keybindings/": "",
+        "/org/gnome/mutter/wayland/keybindings/": "",
+        "/org/gnome/shell/keybindings/": "[/]\nswitch-to-application-1=@as []\nswitch-to-application-2=@as []\nswitch-to-application-3=@as []\nswitch-to-application-4=@as []\ntoggle-application-view=@as []\ntoggle-overview=['<Super>w']",
+        "/org/gnome/desktop/wm/keybindings/": "[/]\nclose=['<Shift><Super>c']\ncycle-group=@as []\ncycle-group-backward=@as []\ncycle-panels=@as []\ncycle-panels-backward=@as []\ncycle-windows=@as []\ncycle-windows-backward=@as []\nmaximize=@as []\nmove-to-workspace-1=['<Shift><Super>1']\nmove-to-workspace-2=['<Shift><Super>2']\nmove-to-workspace-3=['<Shift><Super>3']\nmove-to-workspace-4=['<Shift><Super>4']\nmove-to-workspace-5=['<Super>5']\nmove-to-workspace-6=['<Super>6']\nmove-to-workspace-7=['<Super>7']\nmove-to-workspace-8=['<Super>8']\nmove-to-workspace-9=['<Super>9']\nswitch-applications=['<Super>Tab']\nswitch-applications-backward=['<Shift><Super>Tab']\nswitch-to-workspace-1=['<Super>1']\nswitch-to-workspace-2=['<Super>2']\nswitch-to-workspace-3=['<Super>3']\nswitch-to-workspace-4=['<Super>4']\nswitch-to-workspace-last=@as []\ntoggle-fullscreen=['<Shift><Super>f']\ntoggle-maximized=['<Shift><Super>m']",
+        "/org/gnome/settings-daemon/plugins/media-keys/": "[/]\ncontrol-center=['<Super>i']\ncustom-keybindings=['/org/gnome/settings-daemon/plugins/media-keys/custom-keybindings/custom0/', '/org/gnome/settings-daemon/plugins/media-keys/custom-keybindings/custom1/']\nhome=['<Super>f']\nwww=['<Super>b']\n\n[custom-keybindings/custom0]\nbinding='<Super>Return'\ncommand='gnome-terminal'\nname='Open Terminal'\n\n[custom-keybindings/custom1]\nbinding='<Control><Super>t'\ncommand='/home/noah/.scripts/github.com/noahdotpy/.dotfiles/toggle_touchpad_gnome.sh'\nname='Toggle Touchpad'"
+    },
+    "tweaks": {
+        "/org/gnome/desktop/background/": "[/]\ncolor-shading-type='solid'\npicture-options='zoom'\npicture-uri='file:///home/noah/.local/share/backgrounds/2022-11-19-17-35-27-3840x2160.png'\npicture-uri-dark='file:///home/noah/.local/share/backgrounds/2022-11-19-17-35-27-3840x2160.png'\nprimary-color='#000000000000'\nsecondary-color='#000000000000'",
+        "/org/gnome/desktop/calendar/": "",
+        "/org/gnome/desktop/input-sources/": "[/]\nsources=[('xkb', 'au')]",
+        "/org/gnome/desktop/interface/": "[/]\ncolor-scheme='prefer-dark'\nenable-animations=true\nenable-hot-corners=true\nfont-antialiasing='grayscale'\nfont-hinting='slight'\ngtk-theme='adw-gtk3-dark'\nshow-battery-percentage=true\ntoolkit-accessibility=false",
+        "/org/gnome/desktop/peripherals/": "[mouse]\naccel-profile='flat'\n\n[touchpad]\nedge-scrolling-enabled=false\nsend-events='disabled'\ntap-to-click=true\ntwo-finger-scrolling-enabled=true",
+        "/org/gnome/desktop/screensaver/": "[/]\ncolor-shading-type='solid'\npicture-options='zoom'\npicture-uri='file:///home/noah/.local/share/backgrounds/2022-11-19-17-35-27-3840x2160.png'\nprimary-color='#000000000000'\nsecondary-color='#000000000000'",
+        "/org/gnome/desktop/sound/": "[/]\nevent-sounds=true\ntheme-name='__custom'",
+        "/org/gnome/desktop/wm/preferences/": "[/]\nbutton-layout='appmenu:minimize,maximize,close'\nnum-workspaces=4\nresize-with-right-button=true",
+        "/org/gnome/mutter/": "[/]\nattach-modal-dialogs=false\ncenter-new-windows=true\ndynamic-workspaces=false\noverlay-key='Super_L'",
+        "/org/gnome/settings-daemon/plugins/xsettings/": ""
+    }
+}

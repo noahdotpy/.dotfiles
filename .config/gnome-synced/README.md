@@ -1,0 +1,1 @@
+# Use with [extensions-sync](https://extensions.gnome.org/extension/1486/extensions-sync/)
