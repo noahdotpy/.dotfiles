@@ -1,0 +1,6 @@
+{
+    "nuxt.isNuxtApp": false,
+    "conventionalCommits.scopes": [
+        "script"
+    ]
+}
