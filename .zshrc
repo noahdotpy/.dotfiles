@@ -65,7 +65,13 @@ expand-alias-and-accept-line() {
 }
 zle -N accept-line expand-alias-and-accept-line
 
+# Misc settings
 setopt auto_cd
+
+# History settings
+export HISTFILE=$HOME/.zsh_history
+export SAVEHIST=1000
+setopt share_history
 
 # SET ENVIRONMENTAL VARIABLES
 export EDITOR="nvim"
@@ -133,7 +139,7 @@ pfetch
 # allows something like `j .dot` to go to `~/.dotfiles`
 [[ -s /etc/profile.d/autojump.zsh ]] && source /etc/profile.d/autojump.zsh
 # better command history management (cargo install atuin)
-eval "$(atuin init zsh)"
+# eval "$(atuin init zsh)"
 # better prompt (cargo install starship)
 eval "$(starship init zsh)"
 

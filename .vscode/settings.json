@@ -1,8 +1,9 @@
 {
     "nuxt.isNuxtApp": false,
     "conventionalCommits.scopes": [
+        "vscode workspace",
         "script",
         "gnome",
-        "vscode workspace"
+        "zsh"
     ]
 }
