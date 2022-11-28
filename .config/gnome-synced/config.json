@@ -16,14 +16,14 @@
             "/org/gnome/shell/extensions/user-theme/": "[/]\nname=''"
         },
         "gsconnect@andyholmes.github.io": {
-            "/org/gnome/shell/extensions/gsconnect/": "[/]\nid='e4d37626-baa2-47ad-b722-c39115a556ff'\nname='ideapad-s145'"
+            "/org/gnome/shell/extensions/gsconnect/": "[/]\nid='e4d37626-baa2-47ad-b722-c39115a556ff'\nname='ideapad-s145'\nshow-indicators=false\n\n[preferences]\nwindow-maximized=false\nwindow-size=(640, 440)"
         },
         "drive-menu@gnome-shell-extensions.gcampax.github.com": {},
         "appindicatorsupport@rgcjonas.gmail.com": {
             "/org/gnome/shell/extensions/appindicator/": ""
         },
         "just-perfection-desktop@just-perfection": {
-            "/org/gnome/shell/extensions/just-perfection/": "[/]\nanimation=3\nnotification-banner-position=2\nwindow-demands-attention-focus=true\nworkspace=true\nworkspace-switcher-should-show=true\nworkspace-wrap-around=true"
+            "/org/gnome/shell/extensions/just-perfection/": "[/]\nanimation=3\nnotification-banner-position=2\npanel-button-padding-size=5\npanel-indicator-padding-size=5\nwindow-demands-attention-focus=true\nworkspace=true\nworkspace-switcher-should-show=true\nworkspace-switcher-size=0\nworkspace-wrap-around=true"
         },
         "batterytime@typeof.pw": {},
         "custom-hot-corners-extended@G-dH.github.com": {
@@ -49,13 +49,19 @@
         },
         "ssm-gnome@lgiki.net": {
             "/org/gnome/shell/extensions/simple-system-monitor/": "[/]\ncpu-usage-text='CPU'\ndownload-speed-text='↓'\nextension-order=0\nextension-position='right'\nfont-weight=500\nis-cpu-usage-enable=true\nis-download-speed-enable=false\nis-memory-usage-enable=true\nis-upload-speed-enable=false\nitem-separator=' '\nmemory-usage-text='MEM'\nrefresh-interval=1\nshow-extra-spaces=true\nshow-percent-sign=true\nupload-speed-text='↑'"
+        },
+        "advanced-alt-tab@G-dH.github.com": {
+            "/org/gnome/shell/extensions/advanced-alt-tab-window-switcher/": "[/]\napp-switcher-popup-titles=true\nswitcher-popup-interactive-indicators=true\nswitcher-popup-position=2\nswitcher-popup-preview-selected=3\nswitcher-popup-tooltip-label-scale=115\nswitcher-popup-tooltip-title=3\nwin-switcher-popup-filter=1\nwin-switcher-popup-preview-size=16\nwin-switcher-popup-sorting=1"
+        },
+        "CoverflowAltTab@palatis.blogspot.com": {
+            "/org/gnome/shell/extensions/coverflowalttab/": "[/]\ncurrent-workspace-only='all'\nswitcher-style='Coverflow'"
         }
     },
     "keybindings": {
         "/org/gnome/mutter/keybindings/": "",
         "/org/gnome/mutter/wayland/keybindings/": "",
         "/org/gnome/shell/keybindings/": "[/]\nswitch-to-application-1=@as []\nswitch-to-application-2=@as []\nswitch-to-application-3=@as []\nswitch-to-application-4=@as []\ntoggle-application-view=@as []\ntoggle-overview=['<Super>w']",
-        "/org/gnome/desktop/wm/keybindings/": "[/]\nclose=['<Shift><Super>c']\ncycle-group=@as []\ncycle-group-backward=@as []\ncycle-panels=@as []\ncycle-panels-backward=@as []\ncycle-windows=@as []\ncycle-windows-backward=@as []\nmaximize=@as []\nmove-to-workspace-1=['<Shift><Super>1']\nmove-to-workspace-2=['<Shift><Super>2']\nmove-to-workspace-3=['<Shift><Super>3']\nmove-to-workspace-4=['<Shift><Super>4']\nmove-to-workspace-5=['<Super>5']\nmove-to-workspace-6=['<Super>6']\nmove-to-workspace-7=['<Super>7']\nmove-to-workspace-8=['<Super>8']\nmove-to-workspace-9=['<Super>9']\nswitch-applications=['<Super>Tab']\nswitch-applications-backward=['<Shift><Super>Tab']\nswitch-to-workspace-1=['<Super>1']\nswitch-to-workspace-2=['<Super>2']\nswitch-to-workspace-3=['<Super>3']\nswitch-to-workspace-4=['<Super>4']\nswitch-to-workspace-last=@as []\ntoggle-fullscreen=['<Shift><Super>f']\ntoggle-maximized=['<Shift><Super>m']",
+        "/org/gnome/desktop/wm/keybindings/": "[/]\nclose=['<Shift><Super>c']\ncycle-group=@as []\ncycle-group-backward=@as []\ncycle-panels=@as []\ncycle-panels-backward=@as []\ncycle-windows=@as []\ncycle-windows-backward=@as []\nmaximize=@as []\nmove-to-workspace-1=['<Shift><Super>1']\nmove-to-workspace-2=['<Shift><Super>2']\nmove-to-workspace-3=['<Shift><Super>3']\nmove-to-workspace-4=['<Shift><Super>4']\nmove-to-workspace-5=['<Super>5']\nmove-to-workspace-6=['<Super>6']\nmove-to-workspace-7=['<Super>7']\nmove-to-workspace-8=['<Super>8']\nmove-to-workspace-9=['<Super>9']\nswitch-applications=['<Super>Tab']\nswitch-applications-backward=['<Shift><Super>Tab']\nswitch-to-workspace-1=['<Super>1']\nswitch-to-workspace-2=['<Super>2']\nswitch-to-workspace-3=['<Super>3']\nswitch-to-workspace-4=['<Super>4']\nswitch-to-workspace-last=@as []\nswitch-windows=['<Alt>Tab']\nswitch-windows-backward=['<Shift><Alt>Tab']\ntoggle-fullscreen=['<Shift><Super>f']\ntoggle-maximized=['<Shift><Super>m']",
         "/org/gnome/settings-daemon/plugins/media-keys/": "[/]\ncontrol-center=['<Super>i']\ncustom-keybindings=['/org/gnome/settings-daemon/plugins/media-keys/custom-keybindings/custom0/', '/org/gnome/settings-daemon/plugins/media-keys/custom-keybindings/custom1/']\nhome=['<Super>f']\nwww=['<Super>b']\n\n[custom-keybindings/custom0]\nbinding='<Super>Return'\ncommand='gnome-terminal'\nname='Open Terminal'\n\n[custom-keybindings/custom1]\nbinding='<Control><Super>t'\ncommand='/home/noah/.scripts/github.com/noahdotpy/.dotfiles/toggle_touchpad_gnome.sh'\nname='Toggle Touchpad'"
     },
     "tweaks": {
@@ -65,9 +71,9 @@
         "/org/gnome/desktop/interface/": "[/]\ncolor-scheme='prefer-dark'\nenable-animations=true\nenable-hot-corners=true\nfont-antialiasing='grayscale'\nfont-hinting='slight'\ngtk-theme='adw-gtk3-dark'\nshow-battery-percentage=true\ntoolkit-accessibility=false",
         "/org/gnome/desktop/peripherals/": "[mouse]\naccel-profile='flat'\n\n[touchpad]\nedge-scrolling-enabled=false\nsend-events='disabled'\ntap-to-click=true\ntwo-finger-scrolling-enabled=true",
         "/org/gnome/desktop/screensaver/": "[/]\ncolor-shading-type='solid'\npicture-options='zoom'\npicture-uri='file:///home/noah/.local/share/backgrounds/2022-11-19-17-35-27-3840x2160.png'\nprimary-color='#000000000000'\nsecondary-color='#000000000000'",
-        "/org/gnome/desktop/sound/": "[/]\nevent-sounds=true\ntheme-name='__custom'",
+        "/org/gnome/desktop/sound/": "[/]\nevent-sounds=true\ntheme-name='freedesktop'",
         "/org/gnome/desktop/wm/preferences/": "[/]\nbutton-layout='appmenu:minimize,maximize,close'\nnum-workspaces=4\nresize-with-right-button=true",
-        "/org/gnome/mutter/": "[/]\nattach-modal-dialogs=false\ncenter-new-windows=true\ndynamic-workspaces=false\noverlay-key='Super_L'",
+        "/org/gnome/mutter/": "[/]\nattach-modal-dialogs=false\ncenter-new-windows=true\ndynamic-workspaces=false\nedge-tiling=true\noverlay-key='Super_L'",
         "/org/gnome/settings-daemon/plugins/xsettings/": ""
     }
 }
