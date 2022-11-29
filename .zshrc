@@ -139,7 +139,7 @@ pfetch
 # allows something like `j .dot` to go to `~/.dotfiles`
 [[ -s /etc/profile.d/autojump.zsh ]] && source /etc/profile.d/autojump.zsh
 # better command history management (cargo install atuin)
-# eval "$(atuin init zsh)"
+eval "$(atuin init zsh)"
 # better prompt (cargo install starship)
 eval "$(starship init zsh)"
 

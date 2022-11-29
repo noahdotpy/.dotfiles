@@ -23,12 +23,12 @@
             "/org/gnome/shell/extensions/appindicator/": ""
         },
         "just-perfection-desktop@just-perfection": {
-            "/org/gnome/shell/extensions/just-perfection/": "[/]\nanimation=3\nnotification-banner-position=2\npanel-button-padding-size=5\npanel-indicator-padding-size=5\nwindow-demands-attention-focus=true\nworkspace=true\nworkspace-switcher-should-show=true\nworkspace-switcher-size=0\nworkspace-wrap-around=true"
+            "/org/gnome/shell/extensions/just-perfection/": "[/]\nanimation=3\nclock-menu-position=1\nclock-menu-position-offset=0\nnotification-banner-position=2\npanel-button-padding-size=5\npanel-indicator-padding-size=5\nwindow-demands-attention-focus=true\nworkspace=true\nworkspace-switcher-should-show=true\nworkspace-switcher-size=0\nworkspace-wrap-around=true"
         },
         "batterytime@typeof.pw": {},
         "custom-hot-corners-extended@G-dH.github.com": {
-            "/org/gnome/shell/extensions/custom-hot-corners-extended/": "[misc]\nshow-osd-monitor-indexes=false\nsupported-active-extensions=['ArcMenu']",
-            "/org/gnome/shell/extensions/custom-hot-corners-extended/misc/": "[/]\nshow-osd-monitor-indexes=false\nsupported-active-extensions=['ArcMenu']"
+            "/org/gnome/shell/extensions/custom-hot-corners-extended/": "[misc]\nshow-osd-monitor-indexes=false\nsupported-active-extensions=['ArcMenu', 'AATWS']",
+            "/org/gnome/shell/extensions/custom-hot-corners-extended/misc/": "[/]\nshow-osd-monitor-indexes=false\nsupported-active-extensions=['ArcMenu', 'AATWS']"
         },
         "lockkeys@vaina.lt": {
             "/org/gnome/shell/extensions/lockkeys/": "[/]\nnotification-preferences='osd'\nstyle='show-hide'"
@@ -42,7 +42,7 @@
         "simply.workspaces@andyrichardson.dev": {},
         "disable-workspace-switcher@jbradaric.me": {},
         "arcmenu@arcmenu.com": {
-            "/org/gnome/shell/extensions/arcmenu/": "[/]\ndash-to-panel-standalone=false\nenable-standlone-runner-menu=true\nmenu-background-color='rgba(48,48,49,0.98)'\nmenu-border-color='rgb(60,60,60)'\nmenu-button-appearance='Icon'\nmenu-foreground-color='rgb(223,223,223)'\nmenu-item-active-bg-color='rgb(25,98,163)'\nmenu-item-active-fg-color='rgb(255,255,255)'\nmenu-item-hover-bg-color='rgb(21,83,158)'\nmenu-item-hover-fg-color='rgb(255,255,255)'\nmenu-separator-color='rgba(255,255,255,0.1)'\noverride-menu-theme=false\npinned-app-list=['Firefox', '', 'org.mozilla.firefox.desktop', 'Files', '', 'org.gnome.Nautilus.desktop', 'Terminal', '', 'org.gnome.Terminal.desktop', 'ArcMenu Settings', 'ArcMenu_ArcMenuIcon', 'gnome-extensions prefs arcmenu@arcmenu.com']\nprefs-visible-page=0\nrecently-installed-apps=['appimagekit_553b39b190ed87f6a6a07fd64daa58c2-Hyper.desktop', 'aip_appimagepool-5.0.0-x86_64_fd4cc9ce4dd8e3a99594d0368307bb67_fd4cc9ce4dd8e3a99594d0368307bb67.desktop', 'aip_Hyper-3.4.0-canary.1_2f64fa2c74b67d59fd24c650e24472e8.desktop', 'appimagekit_797b8f9e6869d4c89660587a89b1e943-Hyper.desktop', 'appimagekit_903cab13ae1ea235de05b54c9000df2c-AppImage_Pool.desktop']\nrunner-menu-custom-hotkey=['<Super>a']\nrunner-show-frequent-apps=true\nshow-activities-button=true"
+            "/org/gnome/shell/extensions/arcmenu/": "[/]\ndash-to-panel-standalone=false\nenable-standlone-runner-menu=true\nmenu-background-color='rgba(48,48,49,0.98)'\nmenu-border-color='rgb(60,60,60)'\nmenu-button-appearance='Icon'\nmenu-foreground-color='rgb(223,223,223)'\nmenu-item-active-bg-color='rgb(25,98,163)'\nmenu-item-active-fg-color='rgb(255,255,255)'\nmenu-item-hover-bg-color='rgb(21,83,158)'\nmenu-item-hover-fg-color='rgb(255,255,255)'\nmenu-layout='Whisker'\nmenu-separator-color='rgba(255,255,255,0.1)'\nmint-pinned-app-list=['Firefox (flatpak)', 'org.mozilla.firefox', 'org.mozilla.firefox.desktop', 'Terminal', 'utilities-terminal', 'org.gnome.Terminal.desktop', 'Settings', 'emblem-system-symbolic', 'org.gnome.Settings.desktop', 'Software', '', 'org.gnome.Software.desktop', 'Files', 'system-file-manager', 'org.gnome.Nautilus.desktop', 'Log Out', 'application-exit-symbolic', 'ArcMenu_LogOut', 'Lock', 'changes-prevent-symbolic', 'ArcMenu_Lock', 'Power Off', 'system-shutdown-symbolic', 'ArcMenu_PowerOff']\noverride-menu-theme=false\npinned-app-list=['Firefox', '', 'org.mozilla.firefox.desktop', 'Files', '', 'org.gnome.Nautilus.desktop', 'Terminal', '', 'org.gnome.Terminal.desktop', 'ArcMenu Settings', 'ArcMenu_ArcMenuIcon', 'gnome-extensions prefs arcmenu@arcmenu.com']\nprefs-visible-page=0\nrecently-installed-apps=['appimagekit_553b39b190ed87f6a6a07fd64daa58c2-Hyper.desktop', 'aip_appimagepool-5.0.0-x86_64_fd4cc9ce4dd8e3a99594d0368307bb67_fd4cc9ce4dd8e3a99594d0368307bb67.desktop', 'aip_Hyper-3.4.0-canary.1_2f64fa2c74b67d59fd24c650e24472e8.desktop', 'appimagekit_797b8f9e6869d4c89660587a89b1e943-Hyper.desktop', 'appimagekit_903cab13ae1ea235de05b54c9000df2c-AppImage_Pool.desktop']\nrunner-menu-custom-hotkey=['<Super>a']\nrunner-show-frequent-apps=true\nshow-activities-button=true"
         },
         "bluetooth-quick-connect@bjarosze.gmail.com": {
             "/org/gnome/shell/extensions/bluetooth-quick-connect/": ""
@@ -50,11 +50,8 @@
         "ssm-gnome@lgiki.net": {
             "/org/gnome/shell/extensions/simple-system-monitor/": "[/]\ncpu-usage-text='CPU'\ndownload-speed-text='↓'\nextension-order=0\nextension-position='right'\nfont-weight=500\nis-cpu-usage-enable=true\nis-download-speed-enable=false\nis-memory-usage-enable=true\nis-upload-speed-enable=false\nitem-separator=' '\nmemory-usage-text='MEM'\nrefresh-interval=1\nshow-extra-spaces=true\nshow-percent-sign=true\nupload-speed-text='↑'"
         },
-        "advanced-alt-tab@G-dH.github.com": {
-            "/org/gnome/shell/extensions/advanced-alt-tab-window-switcher/": "[/]\napp-switcher-popup-titles=true\nswitcher-popup-interactive-indicators=true\nswitcher-popup-position=2\nswitcher-popup-preview-selected=3\nswitcher-popup-tooltip-label-scale=115\nswitcher-popup-tooltip-title=3\nwin-switcher-popup-filter=1\nwin-switcher-popup-preview-size=16\nwin-switcher-popup-sorting=1"
-        },
-        "CoverflowAltTab@palatis.blogspot.com": {
-            "/org/gnome/shell/extensions/coverflowalttab/": "[/]\ncurrent-workspace-only='all'\nswitcher-style='Coverflow'"
+        "mediacontrols@cliffniff.github.com": {
+            "/org/gnome/shell/extensions/mediacontrols/": "[/]\ncolored-player-icon=false\nextension-index=50\nextension-position='left'\nhide-media-notification=false\nmouse-actions=['toggle_play', 'toggle_menu', 'none', 'none', 'none', 'none', 'none', 'none']\nprefer-using-seek=false\nseperator-chars=['|', '|']\nshow-control-icons=true\nshow-player-icon=false\nshow-seek-back=false\nshow-seek-forward=false\nshow-seperators=true\nshow-sources-menu=true\nshow-text=false\ntrack-label=['track', '-', 'artist']"
         }
     },
     "keybindings": {
@@ -69,7 +66,7 @@
         "/org/gnome/desktop/calendar/": "",
         "/org/gnome/desktop/input-sources/": "[/]\nsources=[('xkb', 'au')]",
         "/org/gnome/desktop/interface/": "[/]\ncolor-scheme='prefer-dark'\nenable-animations=true\nenable-hot-corners=true\nfont-antialiasing='grayscale'\nfont-hinting='slight'\ngtk-theme='adw-gtk3-dark'\nshow-battery-percentage=true\ntoolkit-accessibility=false",
-        "/org/gnome/desktop/peripherals/": "[mouse]\naccel-profile='flat'\n\n[touchpad]\nedge-scrolling-enabled=false\nsend-events='disabled'\ntap-to-click=true\ntwo-finger-scrolling-enabled=true",
+        "/org/gnome/desktop/peripherals/": "[mouse]\naccel-profile='flat'\n\n[touchpad]\nedge-scrolling-enabled=false\nsend-events='enabled'\ntap-to-click=true\ntwo-finger-scrolling-enabled=true",
         "/org/gnome/desktop/screensaver/": "[/]\ncolor-shading-type='solid'\npicture-options='zoom'\npicture-uri='file:///home/noah/.local/share/backgrounds/2022-11-19-17-35-27-3840x2160.png'\nprimary-color='#000000000000'\nsecondary-color='#000000000000'",
         "/org/gnome/desktop/sound/": "[/]\nevent-sounds=true\ntheme-name='freedesktop'",
         "/org/gnome/desktop/wm/preferences/": "[/]\nbutton-layout='appmenu:minimize,maximize,close'\nnum-workspaces=4\nresize-with-right-button=true",
