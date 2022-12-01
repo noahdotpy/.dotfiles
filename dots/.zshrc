@@ -82,16 +82,6 @@ export BROWSER="firefox"
 ### ABBREVIATIONS/ALIASES ###
 #############################
 
-# NixOS shortcuts
-abbrev nixc="$HOME/.dotfiles/nix/"
-
-abbrev nixupd="$HOME/.scripts/github.com/noahdotpy/.dotfiles/nixos-update"
-abbrev nixapply="$HOME/.scripts/github.com/noahdotpy/.dotfiles/nixos-apply"
-
-# NixOS Home Manager shortcuts
-abbrev hman="home-manager"
-abbrev hmanc="$HOME/.dotfiles/nix/ideapad-s145/users/noah"
-
 # Container shortcuts
 function "-"() {
   NAME="$1"
@@ -139,7 +129,7 @@ pfetch
 # allows something like `j .dot` to go to `~/.dotfiles`
 [[ -s /etc/profile.d/autojump.zsh ]] && source /etc/profile.d/autojump.zsh
 # better command history management (cargo install atuin)
-# eval "$(atuin init zsh)"
+eval "$(atuin init zsh)"
 # better prompt (cargo install starship)
 eval "$(starship init zsh)"
 

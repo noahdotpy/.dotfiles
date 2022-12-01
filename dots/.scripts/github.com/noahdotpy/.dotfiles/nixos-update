@@ -1,5 +1,0 @@
-#!/bin/sh
-pushd ~/.dotfiles/nix/
-echo "Updating flake.lock file..."
-nix flake update
-popd
