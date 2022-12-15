@@ -92,8 +92,8 @@ function "-"() {
 
 # Program shortcuts
 
-function je() {
-  j $1 && $EDITOR .  
+function ze() {
+  pazi_cd $1 && $EDITOR .  
 }
 abbrev e="$EDITOR"
 
@@ -126,12 +126,17 @@ abbrev py="python3"
 # like neofetch but smaller (startup and literal lines it outputs)
 pfetch
 
-# allows something like `j .dot` to go to `~/.dotfiles`
-[[ -s /etc/profile.d/autojump.zsh ]] && source /etc/profile.d/autojump.zsh
+# allows something like `z .dot` to go to `~/.dotfiles`
+if command -v pazi &>/dev/null; then
+  eval "$(pazi init zsh)" # or 'bash'
+fi
+alias zf='z --pipe="fzf"'
 # better command history management (cargo install atuin)
 eval "$(atuin init zsh)"
 # better prompt (cargo install starship)
 eval "$(starship init zsh)"
+
+eval "$(direnv hook zsh)"
 
 # autocomplete (like from fish)
 source $HOME/.zsh/plugins/github.com/zsh-users/zsh-autosuggestions/zsh-autosuggestions.zsh
