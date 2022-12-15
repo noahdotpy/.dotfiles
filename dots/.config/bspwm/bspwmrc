@@ -3,7 +3,7 @@
 pgrep -x sxhkd > /dev/null || sxhkd &
 
 picom &
-nitrogen --restore &
+~/.fehbg &
 dunst &
 ~/.config/polybar/launch.sh &
 greenclip daemon &
@@ -22,7 +22,7 @@ done
 bspc monitor -d $WORKSPACES_AS_STRING
 
 
-bspc config border_width         1
+bspc config border_width         2
 bspc config window_gap           8
 
 bspc config split_ratio          0.52
@@ -41,4 +41,4 @@ bspc rule -a ".blueman-manager-wrapped" state=floating
 bspc rule -a *:*:Picture-in-Picture state=floating sticky=on
 
 # Auto-start GUI Programs as a sort of welcome back type thing
-rofi -show drun &
+# rofi -show drun &
